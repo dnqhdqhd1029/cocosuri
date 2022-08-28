@@ -1,16 +1,150 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>코코수리</title>
     <link href="/css/style.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://thekenwheeler.herokuapp.com/scripts/browserSwipe.js"></script>
+    <script src="https://thekenwheeler.herokuapp.com/scripts/touchswipe.js"></script>
 </head>
+
 <body>
-    test zzz
-    두번째 테스트 왜 바로 안올라감?
-    다시 자격증명 하고 
+    <header id="header">
+        <button class="menu">빠른메뉴</button>
+        <button class="logo">코코수리 로고</button>
+        <div class="search on">
+            <input type="search" placeholder="검색어를 입력해주세요" />
+        <button class="ic-search">검색</button>
+        </div>
+       
+    </header>
+    <nav>
+        <button class="on">서비스</button>
+        <button>스토어</button>
+        <button>기획전</button>
+        <button>수리사례</button>
+        <button>수리사례</button>
+        <button>수리사례</button>
+        <button>수리사례</button>
+        <button>수리사례</button>
+        <button>수리사례</button>
+    </nav>
+
+    <footer>
+        <button class="ic-home">홈</button>
+        <button class="ic-store">스토어</button>
+        <button class="ic-write">견적보기</button>
+        <button class="ic-community">커뮤니티</button>
+        <button class="ic-mypage">내정보</button>
+    </footer>
+    <div id="scroll">
+        <section class="section">
+           <!-- <div class="video">
+                <div class="video-container">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eitDnP0_83k?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+             <div class="before-after-img-box js-before-after-img-box">
+                <div class="btn-drag js-drag ui-draggable ui-draggable-handle" style="left: 279px; top: 143px;"></div>
+                <div class="before-after-img">
+                    <div class="before-box js-before" style="width: 310px;">
+                        <span class="lb-name tt-eng">before</span>
+                        <div class="img-box"
+                            style="background-image: url('https://uimg.vhom.kr/storage/dp/dpContImgFile/이천동양2_비포_1280_720_20220728101550.jpg');">
+                        </div>
+                    </div>
+                    <div class="after-box js-after">
+                        <span class="lb-name tt-eng">after</span>
+                        <div class="img-box"
+                            style="background-image: url('https://uimg.vhom.kr/storage/dp/dpContImgFile/이천동양2_에프터_1280_720_20220728101601.jpg');">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+        <section class="section"><span>2</span></section>
+        <section class="section"><span>3</span></section>
+        <section class="section"><span>4</span></section>
+        <section class="section"><span>5</span></section>
+        <section class="section"><span>6</span></section>
+        <section class="section"><span>7</span></section>
+    </div>
+
+
+    <script>
+        var $body = $('html, body'),
+            actualSection = 0,
+            totalSections = 7,
+            speed = 300,
+            isScrolling = false,
+            scrollingTimer,
+            clicking = false,
+            friction = 100,
+            startY;
+
+        $('body').swipe({
+            swipe: function (event, direction) {
+                if (direction == 'up') {
+                    moveScroll('down');
+                } else if (direction == 'down') {
+                    moveScroll('up');
+                }
+            }
+        });
+        $('body, a, iframe').on('touchmove', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+        });
+        $('a, iframe').on('mouseenter', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+        });
+        $.browserSwipe({
+            up: function () {
+                moveScroll('up');
+            },
+            down: function () {
+                moveScroll('down');
+            }
+        });
+
+        // window resize
+        var resizeTimeout;
+        $(window).on('resize', function () {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function () {
+                moveScroll();
+            }, 600);
+        });
+
+        var moveScroll = function (dir) {
+
+            if ($body.is(':animated') == false) {
+                isScrolling = true;
+                clearTimeout(scrollingTimer);
+
+                if (dir == 'up') {
+                    actualSection = actualSection <= 0 ? 0 : actualSection - 1;
+                } else if (dir == 'down') {
+                    actualSection = actualSection >= totalSections - 1 ? totalSections - 1 : actualSection + 1;
+                }
+
+                $('#scroll').css({
+                    transform: 'translateY(-' + actualSection * $(window).height() + 'px)'
+                }, speed);
+
+                scrollingTimer = setTimeout(function () {
+                    isScrolling = false;
+                    clicking = false;
+                }, speed + 10);
+            }
+        }
+    </script>
 
 </body>
+
 </html>
