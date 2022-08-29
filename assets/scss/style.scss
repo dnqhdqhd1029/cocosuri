@@ -15,7 +15,7 @@ body {
   /*word-spacing: -2px;
   letter-spacing: -0.45px;*/
   overflow-x: hidden;
-  color: #666;
+  color: #666; 
 }
 
 img {
@@ -47,14 +47,14 @@ header{
         width:26px;
         height: 26px;
         font-size: 0;
-        background: url(/images/ic-menu.svg) center center no-repeat;
+        background: url(../images/ic-menu.svg) center center no-repeat;
         background-size: contain;
     }
     .logo{
         width: 128px;
         height: 26px;
-        background: url(/images/ic-logo.svg) center center no-repeat;
-        background-size: auto 12px;
+        background: url(../images/ic-logo.svg) center center no-repeat;
+        background-size: auto 12px; 
         margin-left: 5px;
         font-size: 0;
         text-indent: -9999px;
@@ -76,7 +76,7 @@ header{
         .ic-search{
             width: 24px;
             height: 24px;
-            background: url(/images/ic-search.svg) center center no-repeat;
+            background: url(../images/ic-search.svg) center center no-repeat;
             background-size: 24px;
             font-size: 0;
             text-indent: -9999px;
@@ -298,25 +298,25 @@ footer{
 
     .ic-home{
         &::before{
-            background:url(/images/ic-foot-home.svg) center center no-repeat ;
+            background:url(../images/ic-foot-home.svg) center center no-repeat ;
             background-size: 26px;
         }
     }
     .ic-store{
         &::before{
-            background:url(/images/ic-foot-store.svg) center center no-repeat ;
+            background:url(../images/ic-foot-store.svg) center center no-repeat ;
             background-size: 26px;
         }
     }
     .ic-community{
         &::before{
-            background:url(/images/ic-foot-community.svg) center center no-repeat ;
+            background:url(../images/ic-foot-community.svg) center center no-repeat ;
             background-size: 26px;
         }
     }
     .ic-mypage{
         &::before{
-            background:url(/images/ic-foot-mypage.svg) center center no-repeat ;
+            background:url(../images/ic-foot-mypage.svg) center center no-repeat ;
             background-size: 26px;
         }
     }
@@ -332,7 +332,7 @@ footer{
         padding-top: 5px;
         box-shadow: 2px 2px 10px rgba(102, 102, 102, 0.2);
         &::before{
-            background:url(/images/ic-write.svg) center center no-repeat ;
+            background:url(../images/ic-write.svg) center center no-repeat ;
             background-size: 26px;
         }
         
@@ -374,7 +374,6 @@ transition: all .1s ease-in-out;
     }
 
     .section01{
-        border: 1px solid red;
     }
 }
 

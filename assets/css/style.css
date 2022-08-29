@@ -46,13 +46,13 @@ header .header .menu {
   width: 26px;
   height: 26px;
   font-size: 0;
-  background: url(/images/ic-menu.svg) center center no-repeat;
+  background: url(../images/ic-menu.svg) center center no-repeat;
   background-size: contain;
 }
 header .header .logo {
   width: 128px;
   height: 26px;
-  background: url(/images/ic-logo.svg) center center no-repeat;
+  background: url(../images/ic-logo.svg) center center no-repeat;
   background-size: auto 12px;
   margin-left: 5px;
   font-size: 0;
@@ -74,7 +74,7 @@ header .header div.search input[type=search]::placeholder {
 header .header div.search .ic-search {
   width: 24px;
   height: 24px;
-  background: url(/images/ic-search.svg) center center no-repeat;
+  background: url(../images/ic-search.svg) center center no-repeat;
   background-size: 24px;
   font-size: 0;
   text-indent: -9999px;
@@ -257,19 +257,19 @@ footer button::before {
   margin-bottom: 5px;
 }
 footer .ic-home::before {
-  background: url(/images/ic-foot-home.svg) center center no-repeat;
+  background: url(../images/ic-foot-home.svg) center center no-repeat;
   background-size: 26px;
 }
 footer .ic-store::before {
-  background: url(/images/ic-foot-store.svg) center center no-repeat;
+  background: url(../images/ic-foot-store.svg) center center no-repeat;
   background-size: 26px;
 }
 footer .ic-community::before {
-  background: url(/images/ic-foot-community.svg) center center no-repeat;
+  background: url(../images/ic-foot-community.svg) center center no-repeat;
   background-size: 26px;
 }
 footer .ic-mypage::before {
-  background: url(/images/ic-foot-mypage.svg) center center no-repeat;
+  background: url(../images/ic-foot-mypage.svg) center center no-repeat;
   background-size: 26px;
 }
 footer .ic-write {
@@ -284,7 +284,7 @@ footer .ic-write {
   box-shadow: 2px 2px 10px rgba(102, 102, 102, 0.2);
 }
 footer .ic-write::before {
-  background: url(/images/ic-write.svg) center center no-repeat;
+  background: url(../images/ic-write.svg) center center no-repeat;
   background-size: 26px;
 }
 
@@ -314,10 +314,6 @@ footer .ic-write::before {
   font-weight: 700;
   font-size: 26px;
 }
-#scroll .section01 {
-  border: 1px solid red;
-}
-
 #output {
   position: fixed;
   line-height: 1;
