@@ -217,7 +217,7 @@ button {
   background-color: transparent;
   cursor: pointer;
   box-sizing: border-box;
-  word-spacing: -6px;
+  
 }
 /*button,[type="button"],[type="reset"],[type="submit"]{background-color:transparent;cursor: pointer;}*/
 select {
@@ -305,6 +305,11 @@ a[x-apple-data-detectors] {
   font-size: 3px;
   color: transparent;
   line-height: 0;
+}
+
+.hidden-text{
+  font-size: 0;
+  text-indent: -99999px;
 }
 
 /* 공통
@@ -404,7 +409,10 @@ a[x-apple-data-detectors] {
 }
 
 .text-blue {
-  color: #54c3f1;
+  color: #203A62;
+}
+.text-orange {
+  color: #EB7305;
 }
 .text-red {
   color: #d40000;
@@ -413,10 +421,10 @@ a[x-apple-data-detectors] {
   color: #a6cd64;
 }
 .text-green {
-  color: #00592d;
+  color: #4D855E;
 }
 .text-black {
-  color: #1d1d21;
+  color: #000;
 }
 .text-gray {
   color: #93939a;
@@ -753,7 +761,7 @@ a[x-apple-data-detectors] {
   justify-content: start;
   align-items: center;
 }
-.flex-end {
+.flex-right {
   display: flex;
   justify-content: end;
   align-items: center;
