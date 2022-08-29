@@ -38,7 +38,7 @@ header {
 header .header {
   height: 40px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   padding: 15px;
 }
@@ -149,13 +149,13 @@ header nav button.on {
 .side-menu .menu .logo {
   width: 166px;
   height: 18px;
-  background: url(../../images/ic-logo.svg) center center no-repeat;
+  background: url(../images/ic-logo.svg) center center no-repeat;
   background-size: contain;
 }
 .side-menu .menu .close {
   width: 26px;
   height: 26px;
-  background: url(../../images/ic-close.svg) center center no-repeat;
+  background: url(../images/ic-close.svg) center center no-repeat;
   background-size: contain;
 }
 .side-menu .menu button.login {
@@ -193,23 +193,23 @@ header nav button.on {
   margin-right: 10px;
 }
 .side-menu .menu nav button.ic-home::before {
-  background: url(../../images/ic-home.png) center center no-repeat;
+  background: url(../images/ic-home.png) center center no-repeat;
   background-size: auto 24px;
 }
 .side-menu .menu nav button.ic-store::before {
-  background: url(../../images/ic-store.png) center center no-repeat;
+  background: url(../images/ic-store.png) center center no-repeat;
   background-size: auto 24px;
 }
 .side-menu .menu nav button.ic-community::before {
-  background: url(../../images/ic-community.png) center center no-repeat;
+  background: url(../images/ic-community.png) center center no-repeat;
   background-size: auto 24px;
 }
 .side-menu .menu nav button.ic-driver::before {
-  background: url(../../images/ic-driver.png) center center no-repeat;
+  background: url(../images/ic-driver.png) center center no-repeat;
   background-size: auto 24px;
 }
 .side-menu .menu nav button.ic-service::before {
-  background: url(../../images/ic-service.png) center center no-repeat;
+  background: url(../images/ic-service.png) center center no-repeat;
   background-size: auto 24px;
 }
 .side-menu .menu .lnb {
@@ -486,10 +486,10 @@ iframe {
 }
 
 .before-after-img-box .btn-drag:before {
-  background: url(../../images/common/comm_drag_prev.png) 0 0/cover no-repeat;
+  background: url(../images/common/comm_drag_prev.png) 0 0/cover no-repeat;
 }
 
 .before-after-img-box .btn-drag:after {
   margin-left: 9px;
-  background: url(../../images/common/comm_drag_next.png) 0 0/cover no-repeat;
+  background: url(../images/common/comm_drag_next.png) 0 0/cover no-repeat;
 }
