@@ -20,7 +20,10 @@ img {
     max-width: 100%;
 }
 
-
+body {
+    height: 100vh;
+    overflow: hidden;
+  }
 header {
     position: fixed;
     width: 100%;
