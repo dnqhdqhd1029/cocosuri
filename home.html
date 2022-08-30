@@ -5,11 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
     <title>코코수리</title>
     <link href="./assets/css/style.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://thekenwheeler.herokuapp.com/scripts/browserSwipe.js"></script>
     <script src="https://thekenwheeler.herokuapp.com/scripts/touchswipe.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
 </head>
 
 <body>
@@ -17,7 +25,7 @@
         <div class="header">
             <button class="menu" onclick="openNav()">빠른메뉴</button>
             <button class="logo">코코수리 로고</button>
-            <div class="search on">
+            <div class="search">
                 <input type="search" placeholder="검색어를 입력해주세요" />
                 <button class="ic-search hidden-text">검색</button>
             </div>
@@ -64,7 +72,10 @@
         </div>
     </div>
     
-    <div id="scroll">
+    <div id="scroll" class="main">
+
+        
+
         <section class="section01">
 
             <div class="title">
@@ -124,61 +135,110 @@
                 </div>
             </div>
         </section>
-        <section class="section05">
+        <section class="section05 slide-container">
             <div class="title">
                 <span class="text-orange">가격은 기본!</span><br/>
                 <b class="text-blue">시공까지 완벽하게</b>
             </div>
 
-            <div class="slide-wrap">
-                <div class="slide">
-                    <button>
-                        <div class="img">
-                            <img src="../cocosuri/images/img-test.png" alt="" />    
-                        </div>
-                        <div class="description">
-                            <div class="flex-justify">
-                                <span class="bg-blue">수리</span>
-                                <span class="ic-start">
-                                    <i></i> 5.0
-                                </span>
+            <div class="swiper mySwiper">
+                <div class="slide-wrap swiper-wrapper">
+                    <div class="slide swiper-slide">
+                        <button>
+                            <div class="img">
+                                <img src="./assets/images/img-test.png" alt="" />      
                             </div>
-                            <div class="text">
-                                기사님 진짜 꼼꼼완벽 그자체!! <br/>
-                                만족해요. 담에 또 이용하려구요
-                            </div>
+                            <div class="description">
+                                <div class="flex-justify">
+                                    <span class="round bg-blue">수리</span>
+                                    <span class="ic-start">
+                                        <i></i> 5.0
+                                    </span>
+                                </div>
+                                <div class="text">
+                                    기사님 진짜 꼼꼼완벽 그자체!! <br/>
+                                    만족해요. 담에 또 이용하려구요
+                                </div>
 
-                            <div class="date">
-                                2022-05-24
+                                <div class="date">
+                                    2022-05-24
+                                </div>
                             </div>
-                        </div>
-                    </button>
-                </div>
-                <div class="slide">
-                    <button>
-                        <div class="img">
-                            <img src="../cocosuri/images/img-test.png" alt="" />    
-                        </div>
-                        <div class="description">
-                            <div class="flex-justify">
-                                <span class="bg-green">상품</span>
-                                <span>
-                                    <i></i> 5.0
-                                </span>
+                        </button>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <button>
+                            <div class="img">
+                                <img src="./assets/images/img-test.png" alt="" />    
                             </div>
-                            <div class="text">
-                                기사님 진짜 꼼꼼완벽 그자체!! <br/>
-                                만족해요. 담에 또 이용하려구요
-                            </div>
+                            <div class="description">
+                                <div class="flex-justify">
+                                    <span class=" round bg-green">상품</span>
+                                    <span class="ic-start">
+                                        <i></i> 5.0
+                                    </span>
+                                </div>
+                                <div class="text">
+                                    기사님 진짜 꼼꼼완벽 그자체!! <br/>
+                                    만족해요. 담에 또 이용하려구요
+                                </div>
 
-                            <div class="date">
-                                2022-05-24
+                                <div class="date">
+                                    2022-05-24
+                                </div>
                             </div>
-                        </div>
-                    </button>
+                        </button>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <button>
+                            <div class="img">
+                                <img src="./assets/images/img-test.png" alt="" />    
+                            </div>
+                            <div class="description">
+                                <div class="flex-justify">
+                                    <span class=" round bg-green">상품</span>
+                                    <span class="ic-start">
+                                        <i></i> 5.0
+                                    </span>
+                                </div>
+                                <div class="text">
+                                    기사님 진짜 꼼꼼완벽 그자체!! <br/>
+                                    만족해요. 담에 또 이용하려구요
+                                </div>
+
+                                <div class="date">
+                                    2022-05-24
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
                 </div>
             </div>
+
+            
+            <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                  slidesPerGroup: 3,
+                  loop: true,
+                  loopFillGroupWithBlank: true,
+                  pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                  },
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
+                });
+              </script>
         </section>
+
+      
         <section class="section06">
             <div class="title">
                 <span class="text-orange">안전한 서비스</span><br/>
@@ -242,7 +302,8 @@
                 </ul>
             </div>
         </section>
-        <section class="section09">
+
+        <section class="section09 marster-container">
             <div class="title">
                 <span class="text-orange">믿을 수 있는 기사님</span><br/>
                 <b class="text-blue">코코수리 마스터</b>
@@ -250,40 +311,110 @@
                     실력과 신원을 보장합니다.</p>
             </div>
 
-            <div class="slide-wrap">
-                <div class="slide card-box flex-justify">
-                    <div>
-                        <i></i>
-                        <span>김수리 마스터님</span>
-                        <span class="ic-start"><i></i> 4.9</span>
+            <div class="swiper mySwiper01">
+                <div class="slide-wrap swiper-wrapper">
+                    <div class="slide card-box swiper-slide">
+                        <div class=" flex-justify">
+                            <div>
+                                <i class="marster01 marster"></i>
+                                <span>김수리 마스터님</span>
+                                <span class="ic-start"><i></i> 4.9</span>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>✓ 친절 기사님</li>
+                                    <li>✓ 방역 수칙 준수</li>
+                                    <li>✓ 백신 접종 완료</li>
+                                    <li>✓ 신원 검증</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <ul>
-                            <li>✓ 친절 기사님</li>
-                            <li>✓ 방역 수칙 준수</li>
-                            <li>✓ 백신 접종 완료</li>
-                            <li>✓ 신원 검증</li>
-                        </ul>
+               
+                    <div class="slide card-box swiper-slide">
+                        <div class=" flex-justify">
+                            <div>
+                                <i class="marster02 marster"></i>
+                                <span>김수리 마스터님</span>
+                                <span class="ic-start"><i></i> 4.9</span>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>✓ 친절 기사님</li>
+                                    <li>✓ 방역 수칙 준수</li>
+                                    <li>✓ 백신 접종 완료</li>
+                                    <li>✓ 신원 검증</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-           
-                <div class="slide card-box flex-justify">
-                    <div>
-                        <i></i>
-                        <span>김수리 마스터님</span>
-                        <span class="ic-start"><i></i> 4.9</span>
+
+                    <div class="slide card-box swiper-slide">
+                        <div class=" flex-justify">
+                            <div>
+                                <i class="marster03 marster"></i>
+                                <span>김수리 마스터님</span>
+                                <span class="ic-start"><i></i> 4.9</span>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>✓ 친절 기사님</li>
+                                    <li>✓ 방역 수칙 준수</li>
+                                    <li>✓ 백신 접종 완료</li>
+                                    <li>✓ 신원 검증</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <ul>
-                            <li>✓ 친절 기사님</li>
-                            <li>✓ 방역 수칙 준수</li>
-                            <li>✓ 백신 접종 완료</li>
-                            <li>✓ 신원 검증</li>
-                        </ul>
+                    <div class="slide card-box swiper-slide">
+                        <div class=" flex-justify">
+                            <div>
+                                <i class="marster04 marster"></i>
+                                <span>김수리 마스터님</span>
+                                <span class="ic-start"><i></i> 4.9</span>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>✓ 친절 기사님</li>
+                                    <li>✓ 방역 수칙 준수</li>
+                                    <li>✓ 백신 접종 완료</li>
+                                    <li>✓ 신원 검증</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+
+
+                    
+
                 </div>
             </div>
+
+            
+            <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+            <script>
+                var swiper = new Swiper(".mySwiper01", {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                  slidesPerGroup: 4,
+                  loop: true,
+                  loopFillGroupWithBlank: true,
+                  pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                  },
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
+                });
+              </script>
+
+
+            
         </section>
+        
         <section class="section10">
             <div class="title">
                 <span class="text-orange">이럴 때 코코수리를 찾으세요!</span><br/>
@@ -393,7 +524,7 @@
         var $body = $('html, body'),
             actualSection = 0,
             totalSections = 13,
-            speed = 300,
+            speed = 100,
             isScrolling = false,
             scrollingTimer,
             clicking = false,
@@ -432,7 +563,7 @@
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(function () {
                 moveScroll();
-            }, 600);
+            }, 100);
         });
 
         var moveScroll = function (dir) {
