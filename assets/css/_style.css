@@ -11,12 +11,19 @@ body {
   font-weight: 400;
   width: 100%;
   height: 100%;
+  /*word-spacing: -2px;
+  letter-spacing: -0.45px;*/
   overflow-x: hidden;
   color: #666;
 }
 
 img {
   max-width: 100%;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
 }
 
 header {
@@ -165,7 +172,7 @@ header nav button.on {
   background-color: rgba(250, 224, 200, 0.2);
   padding: 16px 20px;
   margin: 25px 0;
-  color: #0c274a;
+  color: #0C274A;
   font-size: 16px;
   text-align: left;
 }
@@ -180,14 +187,13 @@ header nav button.on {
   padding: 10px 20px;
   display: block;
   text-align: left;
-  color: #eb7305;
+  color: #EB7305;
   display: flex;
   justify-content: start;
   align-items: center;
 }
 .side-menu .menu nav button::before {
   content: "";
-  display: inline-block;
   width: 26px;
   height: 26px;
   margin-right: 10px;
@@ -275,7 +281,7 @@ footer .ic-mypage::before {
 footer .ic-write {
   width: 60px;
   height: 60px;
-  background-color: #eb7305;
+  background-color: #EB7305;
   border-radius: 50%;
   color: #fff;
   margin-bottom: 9px;
@@ -326,6 +332,7 @@ footer .ic-write::before {
   margin-top: 20px;
 }
 .main .slide-container {
+  border: 1px solid red;
   padding: 0;
 }
 .main .slide-container .title {
@@ -488,8 +495,7 @@ footer .ic-write::before {
   background-size: contain;
   margin-right: 5px;
 }
-
-#output {
+.main #output {
   position: fixed;
   line-height: 1;
   bottom: 10px;
@@ -500,8 +506,7 @@ footer .ic-write::before {
   width: 200px;
   text-align: right;
 }
-
-.video {
+.main .video {
   width: 100%;
   max-width: 900px;
   margin: 30px auto;
@@ -511,13 +516,13 @@ footer .ic-write::before {
   box-sizing: border-box;
   box-shadow: 0px 8px 33px #999;
 }
-.video .video-container {
+.main .video-container {
   position: relative;
   width: 100%;
   height: auto;
   padding-top: 50%;
 }
-.video iframe {
+.main iframe {
   z-index: 1;
   top: 0;
   left: 0;
@@ -525,8 +530,7 @@ footer .ic-write::before {
   width: 100%;
   height: 100%;
 }
-
-.before-after-img-box {
+.main .before-after-img-box {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -535,8 +539,7 @@ footer .ic-write::before {
   width: 800px;
   padding-top: 56.25%;
 }
-
-.before-after-img-box .before-after-img {
+.main .before-after-img-box .before-after-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -549,15 +552,13 @@ footer .ic-write::before {
   display: -ms-flexbox;
   display: flex;
 }
-
-.before-after-img-box .before-box {
+.main .before-after-img-box .before-box {
   position: relative;
   overflow: hidden;
   width: 50%;
   height: 100%;
 }
-
-.before-after-img-box .after-box {
+.main .before-after-img-box .after-box {
   position: relative;
   overflow: hidden;
   flex: 1;
@@ -566,8 +567,7 @@ footer .ic-write::before {
   height: 100%;
   border-left: 2px solid #fff;
 }
-
-.before-after-img-box .img-box {
+.main .before-after-img-box .img-box {
   z-index: 1;
   position: absolute;
   width: 800px;
@@ -576,8 +576,7 @@ footer .ic-write::before {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.before-after-img-box .img-box:after {
+.main .before-after-img-box .img-box:after {
   content: "";
   position: absolute;
   display: block;
@@ -589,17 +588,14 @@ footer .ic-write::before {
   background: linear-gradient(90deg, #000 0%, #000 8%, rgba(0, 0, 0, 0) 100%);
   opacity: 0.2;
 }
-
-.before-after-img-box .after-box .img-box:after {
+.main .before-after-img-box .after-box .img-box:after {
   background: linear-gradient(-90deg, #000 0%, #000 8%, rgba(0, 0, 0, 0) 100%);
 }
-
-.before-after-img-box .img-box img {
+.main .before-after-img-box .img-box img {
   max-width: 100%;
   width: 100%;
 }
-
-.before-after-img-box .lb-name {
+.main .before-after-img-box .lb-name {
   z-index: 2;
   position: absolute;
   top: 30px;
@@ -607,31 +603,25 @@ footer .ic-write::before {
   color: #fff;
   text-transform: capitalize;
 }
-
-.before-after-img-box .before-box .lb-name {
+.main .before-after-img-box .before-box .lb-name {
   left: 30px;
 }
-
-.before-after-img-box .after-box .lb-name {
+.main .before-after-img-box .after-box .lb-name {
   right: 30px;
 }
-
-.before-after-img-box .before-box .img-box {
+.main .before-after-img-box .before-box .img-box {
   left: 0;
 }
-
-.before-after-img-box .after-box .img-box {
+.main .before-after-img-box .after-box .img-box {
   right: 0;
   background-position: top right;
 }
-
-.before-after-img-box ~ .interior-link {
+.main .before-after-img-box ~ .interior-link {
   top: 450px;
   bottom: 0;
   height: auto;
 }
-
-.before-after-img-box .btn-drag {
+.main .before-after-img-box .btn-drag {
   z-index: 5;
   position: absolute;
   top: calc(50% - 32px);
@@ -650,21 +640,18 @@ footer .ic-write::before {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
   font-size: 0;
 }
-
-.before-after-img-box .btn-drag:before,
-.before-after-img-box .btn-drag:after {
+.main .before-after-img-box .btn-drag:before,
+.main .before-after-img-box .btn-drag:after {
   content: "";
   display: inline-block;
   width: 16px;
   height: 16px;
 }
-
-.before-after-img-box .btn-drag:before {
+.main .before-after-img-box .btn-drag:before {
   background: url(../images/common/comm_drag_prev.png) 0 0 no-repeat;
   background-size: cover;
 }
-
-.before-after-img-box .btn-drag:after {
+.main .before-after-img-box .btn-drag:after {
   margin-left: 9px;
   background: url(../images/common/comm_drag_next.png) 0 0 no-repeat;
   background-size: cover;
