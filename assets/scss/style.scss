@@ -95,10 +95,12 @@ header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex: 1;
+            width: 52%;
+            
 
             input[type="search"] {
                 display: block;
+                width: 85%;
             }
         }
 
@@ -364,23 +366,30 @@ transition: all .1s ease-in-out;*/
 
 
     &>section {
+        /*height:calc(100vh - 55px);*/
         height: 100vh;
-        background: #fff;
-        padding: 50px 40px;
+        background-color: #fff;
+        padding-top: 150px;
+        padding-bottom: 46px;
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         flex-direction: column;
+        position: relative;
 
 
         &:nth-child(odd) {
-            background: #FEF9F4;
+            background-color: #FEF9F4;
         }
 
         .title {
             width: 100%;
             margin-bottom: 30px;
             font-size: 16px;
+            color: #444;
+            padding: 0 38px;
+            line-height: 30px;
+            word-break: keep-all;
 
             span {
                 font-weight: 500;
@@ -396,16 +405,19 @@ transition: all .1s ease-in-out;*/
 
             p {
                 font-size: 16px;
-                line-height: 20px;
+                line-height: 22px;
                 margin-top: 20px;
             }
+
+            
         }
 
     }
 
 
     .slide-container {
-        padding: 0;
+        
+        justify-content: center;
 
         .title {
             padding: 0 40px;
@@ -512,7 +524,7 @@ transition: all .1s ease-in-out;*/
     }
 
     .marster-container {
-        padding: 0;
+        justify-content: center;
 
         .title {
             padding: 0 40px;
@@ -637,7 +649,353 @@ transition: all .1s ease-in-out;*/
 
     }
 
-}
+    .section01{
+       justify-content: start;
+       position: relative;
+       
+       &:after{
+        content: '';
+        width:90%;
+        height: 307px;
+        display: inline-block;
+        background: url(../images/bg-men.svg) center center no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: -30px;
+        bottom: 30px;
+
+       }
+       
+       .title{
+        line-height: 35px;
+        font-size: 18px;
+
+        b,strong{
+            font-size: 30px;
+        }
+        button{
+            width: 115px;
+            height: 40px;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            background-color: #EB7305;
+            margin-top: 20px;
+            display: block;
+        }
+       }
+    }
+    .section03{
+        justify-content: end;
+        padding-top: 119px;
+
+        div.img{
+            img{
+               
+                height: 440px;
+            }
+        }
+    }
+
+    .section06{
+        justify-content: center;
+        align-items: start;
+        position: relative;
+
+        &:after{
+            content: '';
+            display: inline-block;
+            width: 162px;
+            height: 162px;
+            background: url(../images/ic-bg-info01.svg) center center no-repeat;
+            background-size: contain;
+            position: absolute;
+            right: 0;
+            bottom: 10%;
+
+        }
+
+        ul{
+            margin-left: 34px;
+            width: 60%;
+        }
+        ul li{
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            margin-bottom: 30px;
+         i{
+            display: inline-block;
+            margin-right: 5px;
+         }
+         span{
+            color: #EB7305;
+            font-weight: 500;
+            display: inline;
+         }
+        }
+    }
+
+    .section07{
+        h2{
+            font-weight: 600;
+            font-size: 26px;
+            color: #203A62;
+            text-align: left;
+            width: 80%;
+            padding: 0 0;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            position: relative;
+
+            button.btn{
+                position: absolute;
+                right: 0;
+                top: 10px;
+                font-size: 14px;
+                background: url(../images/ic-arrow-next.png) right -1px no-repeat;
+                padding-right: 20px;
+                background-size: auto 16px;
+            }
+
+        }
+
+        .cont{
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+            width: 80%;
+            min-height: 320px;
+            margin: 0 auto;
+        }
+       
+    }
+
+    .section08{
+        .cont{
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+            width:82%;
+            margin: 0 auto;
+            padding:30px 20px 10px 20px;
+
+            ul li{
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+
+                i{
+                    display: inline-block;
+                    width: 60px;
+                    height: 60px;
+                }
+
+                .ic-01{
+                    background: url(../images/ic-bg-info04.svg) center center no-repeat;
+                    background-size: contain;
+                }
+                .ic-02{
+                    background: url(../images/ic-bg-info02.svg) center center no-repeat;
+                    background-size: contain;
+                }
+                .ic-03{
+                    background: url(../images/ic-bg-info03.svg) center center no-repeat;
+                    background-size: contain;
+                }
+
+                dl{
+                    flex: 1;
+                    margin-left: 10px;
+                     dt{
+                        font-weight: 600;
+                     }
+                }
+            }
+        }
+       
+    }
+
+    .section10{
+        &::after{
+            
+            content: '';
+            display: inline-block;
+            width: 516px;
+            height: 258px;
+            background: url(../images/ic-bg-car.svg) left top ;
+            background-size: 516px 258px;
+            animation: 10s linear slide infinite;
+            
+            // position: absolute;
+            // left: 0px;
+            // top: 0px;
+     }
+   }
+
+   .section11{
+     .cont{
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+        width:82%;
+        margin: 0 auto;
+        padding:15px;
+        margin-bottom: 30px;
+
+        .tit{
+            font-size: 16px;
+            line-height: 23px;
+            color: #203A62;
+            font-weight: 500;
+        }
+
+        .flex-justify{
+            font-size: 14px;
+            line-height: 18px;
+            margin-top: 15px;
+
+            .btn{
+                width: 95px;
+                height: 40px;
+                text-align: center;
+                color: #fff;
+                border-radius: 10px;
+                font-size: 16px;
+                font-weight: 600;
+
+                &.bg-blue{
+                    background-color: #203A62;
+                }
+                &.bg-orange{
+                    background-color: #EB7305;
+                }
+            }
+        }
+     }
+   }
+
+   .section12{
+        div.list{
+            width: 80%;
+            margin: 0 auto;
+
+            button{
+                display: block;
+                width: 100%;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+                height: 50px;
+                margin-bottom: 20px;
+                font-size: 18px;
+                
+            }
+        }
+   }
+
+   .section13{
+    align-items:start;
+
+     div.txt{
+        width: 100%;
+        margin-left: 38px;
+        color: #203A62;
+        font-size: 16px;
+     }
+
+     div.sns{
+        width: 100%;
+        margin-left: 38px;
+        margin-top: 20px;
+        button{
+
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .ic-instar{
+            background: url(../images/ic-logo-instar.svg) center center no-repeat;
+            background-size: contain;
+        }
+        .ic-blog{
+            background: url(../images/ic-logo-blog.svg) center center no-repeat;
+            background-size: contain;
+        }
+        .ic-youtube{
+            background: url(../images/ic-logo-youtube.svg) center center no-repeat;
+            background-size: contain;
+        }
+        .ic-cocorio{
+            background: url(../images/ic-logo-cco.svg) center center no-repeat;
+            background-size: contain;
+        }
+     }
+
+
+   }
+
+    @keyframes slide {
+        from {
+          transform: translateX(350px);
+        }
+      
+        to {
+          transform: translateX(-516px);
+        }
+      }
+
+      .footer-container{
+        align-items: start;
+        justify-content: center;
+        margin-bottom: 50px;
+        .fnb{
+            padding: 10px 10px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: start;
+            button{
+                flex: 1;
+                font-size: 11px;
+                text-align: center;
+                display: inline-block;
+            }
+        }
+
+        .bg-gray{
+            background-color: #666;
+            color: #fff;
+            
+          }
+
+        .info{
+            padding:10px;
+            span{
+                font-size: 12px;
+            }
+        }
+
+        .address{
+            padding:10px;
+            font-size: 12px;
+            line-height: 18px;
+
+            .font10{
+                font-size: 10px;
+                margin-top: 20px;
+            }
+        }
+        
+      }
+     
+
+}//scroll
 
 #output {
     position: fixed;
@@ -654,28 +1012,36 @@ transition: all .1s ease-in-out;*/
     .video {
         width: 100%;
         max-width: 900px;
-        margin: 30px auto;
-        border-radius: 30px;
-        background-color: #f0f0f0;
-        padding: 40px;
-        box-sizing: border-box;
-        box-shadow: 0px 8px 33px #999;
-    
+        height: 360px;
 
-    .video-container {
-        position: relative;
-        width: 100%;
-        height: auto;
-        padding-top: 50%;
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 360px;
+            padding-top: 50%;
+        }
+
+        iframe {
+            z-index: 1;
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
     }
 
-    iframe {
-        z-index: 1;
-        top: 0;
-        left: 0;
-        position: absolute;
+ 
+/*before-container*/
+
+.before-container{
+    .swiper{
         width: 100%;
-        height: 100%;
+        height: 200px;
+
+        .slide{
+            width: 280px !important;
+        }
     }
 }
 
@@ -685,8 +1051,11 @@ transition: all .1s ease-in-out;*/
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 800px;
-    padding-top: 56.25%;
+    width: 100% !important;
+    /*padding-top: 56.25%;*/
+    border-radius: 10px;
+    overflow: hidden;    
+    height: 185px;
 }
 
 .before-after-img-box .before-after-img {
@@ -755,18 +1124,28 @@ transition: all .1s ease-in-out;*/
 .before-after-img-box .lb-name {
     z-index: 2;
     position: absolute;
-    top: 30px;
-    font-size: 14px;
+    top: 0;
+    font-size:12px;
     color: #fff;
+    text-align: center;
+    display: inline-block;
+    padding: 0 8px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 9px 0px;
     text-transform: capitalize;
 }
 
 .before-after-img-box .before-box .lb-name {
-    left: 30px;
+    left: 0;
+    background-color: #203A62;
+
 }
 
 .before-after-img-box .after-box .lb-name {
-    right: 30px;
+    right: 0;
+    background-color: #eb7305;
+    border-radius: 0px 9px;
 }
 
 .before-after-img-box .before-box .img-box {
@@ -787,32 +1166,34 @@ transition: all .1s ease-in-out;*/
 .before-after-img-box .btn-drag {
     z-index: 5;
     position: absolute;
-    top: calc(50% - 32px);
-    left: calc(50% - 31px);
+    top: calc(50% - 13px);
+    left: calc(50% - 12px);
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 64px;
-    height: 64px;
+    width: 26px;
+    height: 26px;
     background: #fff;
     border: 0;
-    border-radius: 64px;
+    border-radius: 50%;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
     font-size: 0;
 }
 
-.before-after-img-box .btn-drag:before,
+/*.before-after-img-box .btn-drag:before,*/
 .before-after-img-box .btn-drag:after {
     content: '';
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 26px;
+    height: 26px;
+    background: url(../images/ic-both-off.svg) center center no-repeat;
+    background-size: contain;
 }
 
-.before-after-img-box .btn-drag:before {
+/*.before-after-img-box .btn-drag:before {
     background: url(../images/common/comm_drag_prev.png) 0 0 no-repeat;
     background-size: cover;
 }
@@ -821,6 +1202,146 @@ transition: all .1s ease-in-out;*/
     margin-left: 9px;
     background: url(../images/common/comm_drag_next.png) 0 0 no-repeat;
     background-size: cover;
+}*/
+
+
+/* 태블릿, 아이패드 */
+
+@media only screen and (min-device-width : 768px){
+    header .header{
+        height: 60px;
+    }
+    header nav{
+        height: 60px;
+    }
+    .main .section01:after{
+        height: 400px;
+    }
+    .main > section .title{
+        line-height: 40px;
+        font-size: 20px;
+    }
+    .main > section .title span{
+        font-size: 24px;
+    }
+    .main > section .title b{
+        font-size: 36px;
+    }
+    .video {
+        width: 100%;
+        max-width: 900px;
+        height: 560px;
+        .video-container{
+            height: 560px;
+        }
+    }
+    .main .section03 div.img img {
+        height: 640px;
+    }
+    section.before-container{
+        justify-content: center;
+    }
+    .before-container .swiper {
+        width: 100%;
+        height: 500px;
+    }
+    .before-container .swiper .slide {
+        width: 50% !important;
+    }
+    .before-after-img-box{
+        height: 300px;
+    }
+
+    .main .section06{
+        justify-content: start;
+    }
+
+    .main .section06:after{
+        width: 262px;
+        height: 262px;
+    }
+
+    .main .section07{
+        justify-content: center;
+    }
+    .main .section07 h2{
+        font-size: 36px;
+       
+    }
+    .main .section07 h2 button.btn{
+        font-size: 18px;
+    }
+    .main .section08 .cont{
+        width: 90%;
+    }
+
+    .main .marster-container .swiper .slide-wrap .slide{
+        width: 48% !important;
+    }
+
+    .main .section10::after {
+        width: 816px;
+        height: 558px;
+        background-size: 816px 558px;
+    }
+
+    .main .section11 .cont{
+        width: 90%;
+    }
+
+    .main .section12 div.list{
+        width: 90%;
+    }
+
+    .main .section13 div.sns button {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
 }
 
 
+/* 아이폰 SE */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 374px) {
+    .side-menu .menu{
+        overflow-y: scroll;
+    }
+    .side-menu .menu .logo{
+        width: 141px;
+    }
+    .side-menu .menu nav button{
+        padding: 10px 8px;
+    }
+    .main > section{
+        padding-top: 114px;
+    }
+    .main .section01 .title {
+        line-height: 35px;
+        font-size: 14px;
+    }
+    .main .section01 .title b, .main .section01 .title strong {
+        font-size: 26px;
+    }
+    .main .section03 div.img img {
+        height: 340px;
+    }
+    .main .section11 .cont .flex-justify{
+        font-size: 12px;
+    }
+    .main .marster-container .swiper .slide-wrap .slide .flex-justify > div span{
+        font-size: 12px;
+    }
+    .main .marster-container .swiper .slide-wrap .slide .flex-justify > div ul li{
+        font-size: 12px;
+    }
+
+}
+
+/* 아이패드 프로 */
+
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) {
+   
+}
