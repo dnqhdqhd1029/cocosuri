@@ -103,6 +103,7 @@ header nav {
   align-items: center;
   padding: 15px;
   overflow-x: scroll;
+  overflow-y: hidden;
   z-index: 100;
 }
 header nav button {

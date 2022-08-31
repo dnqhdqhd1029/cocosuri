@@ -14,6 +14,7 @@ body {
     height: 100%;
     overflow-x: hidden;
     color: #666;
+    border: 1px solid red;
 }
 
 img {
@@ -22,6 +23,7 @@ img {
 
 body {
     height: 100vh;
+    height: var(--vh, 1vh) * 100;
     overflow: hidden;
   }
 header {
@@ -117,6 +119,7 @@ header {
         align-items: center;
         padding: 15px;
         overflow-x: scroll;
+        overflow-y: hidden;
         z-index: 100;
 
         button {
@@ -148,6 +151,7 @@ header {
     left: 0;
     top: 0;
     height: 100vh;
+    height: var(--vh, 1vh) * 100;
     /*background-color: rgba(0,0,0,0.5);*/
     z-index: 300;
     overflow-x: hidden;
@@ -168,6 +172,7 @@ header {
     .menu {
         width: 70%;
         height: 100vh;
+        height: var(--vh, 1vh) * 100;
         background-color: #fff;
         padding: 30px 19px;
 
@@ -368,6 +373,7 @@ transition: all .1s ease-in-out;*/
     &>section {
         /*height:calc(100vh - 55px);*/
         height: 100vh;
+        height: var(--vh, 1vh) * 100;
         background-color: #fff;
         padding-top: 150px;
         padding-bottom: 46px;
