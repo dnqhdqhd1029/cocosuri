@@ -25,12 +25,33 @@
       <div class="header">
         <button class="menu" onclick="openNav()">빠른메뉴</button>
         <button class="logo">코코수리 로고</button>
-        <div class="search">
+        <div class="search" id="search">
           <input type="search" placeholder="검색어를 입력해주세요" />
-          <button class="ic-search hidden-text">검색</button>
+          <button class="ic-search hidden-text" onclick="myFunction()" >검색</button>
         </div>
         <!--class on 추가시 검색어 나옴 -->
       </div>
+      <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("search").classList.toggle("on");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.ic-search')) {
+            var dropdowns = document.getElementsByClassName("search");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
 
       <nav>
         <button class="on">서비스</button>
@@ -115,7 +136,7 @@
           </p>
         </div>
 
-        <div class="swiper mySwiper03">
+        <div class="swiper  beforeSlider">
           <div class="slide-wrap swiper-wrapper">
             <div class="slide swiper-slide">
                 <div class="before-after-img-box js-before-after-img-box">
@@ -165,20 +186,14 @@
           </div>
         </div>
         <script>
-            var swiper = new Swiper(".mySwiper03", {
-              slidesPerView: 2,
+            var swiper = new Swiper(".beforeSlider", {
+              slidesPerView: 3,
               spaceBetween: 20,
               slidesPerGroup: 3,
               loop: true,
               loopFillGroupWithBlank: true,
-              pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-              },
-              navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-              },
+              centeredSlides: true, 
+             
             });
           </script>
 
@@ -260,14 +275,7 @@
             slidesPerGroup: 3,
             loop: true,
             loopFillGroupWithBlank: true,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            },
+            centeredSlides: true, 
           });
         </script>
       </section>
@@ -337,7 +345,7 @@
           </p>
         </div>
 
-        <div class="swiper mySwiper01">
+        <div class="swiper marsterSlider ">
           <div class="slide-wrap swiper-wrapper">
             <div class="slide card-box swiper-slide">
               <div class="flex-justify">
@@ -413,20 +421,14 @@
         </div>
 
         <script>
-          var swiper = new Swiper(".mySwiper01", {
-            slidesPerView: 2,
+          var swiper = new Swiper(".marsterSlider", {
+            slidesPerView: 3,
             spaceBetween: 20,
-            slidesPerGroup: 4,
+            //slidesPerGroup: 3,
             loop: true,
-            loopFillGroupWithBlank: true,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            },
+            //loopFillGroupWithBlank: true,
+            centeredSlides: true,
+            
           });
         </script>
       </section>
@@ -564,6 +566,45 @@
       <button class="ic-community">커뮤니티</button>
       <button class="ic-mypage">내정보</button>
     </footer>
+
+
+    <div class="banner-container">
+      <div class="swiper bannerSlider">
+        <div class="slide-wrap swiper-wrapper">
+          <div class="slide swiper-slide">
+            <button><img src="./assets//images/img-test01.png" alt=""/></button>
+          </div>
+          <div class="slide swiper-slide">
+            <button><img src="./assets//images/img-test01.png" alt=""/></button>
+          </div>
+          <div class="slide swiper-slide">
+            <button><img src="./assets//images/img-test01.png" alt=""/></button>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <script>
+        var swiper = new Swiper(".bannerSlider", {
+          // slidesPerView: 3,
+          // spaceBetween: 30,
+          // slidesPerGroup: 3,
+          //loop: true,
+          // loopFillGroupWithBlank: true,
+          //centeredSlides: true, 
+          pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+    </div><!--//banner-container-->
 
     <script>
       var $body = $("html, body"),

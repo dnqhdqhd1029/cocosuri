@@ -54,8 +54,9 @@ header {
       width: 128px;
       height: 26px;
       background: url(../images/ic-logo.svg) center center no-repeat;
-      background-size: auto 12px;
+      background-size: contain;
       margin-left: 5px;
+      margin-right: 5px;
       font-size: 0;
       text-indent: -9999px;
     }
@@ -71,6 +72,7 @@ header {
         background-color: transparent;
         font-size: 14px;
         display: none;
+        opacity: 0;
       }
 
       input[type="search"]::placeholder {
@@ -95,11 +97,13 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 52%;
+      width: 47%;
+      transition: all 0.2s ;
 
       input[type="search"] {
         display: block;
-        width: 85%;
+        opacity: 1;
+        width: 80%;
       }
     }
   }
@@ -351,11 +355,39 @@ footer {
   }
 }
 
+.banner-container{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 450px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    .swiper{
+        width: 100%;
+        height: 400px;
+
+        .slide{
+            button{
+                display: block;
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
 .main {
   /*user-select: none;
-transition: all .1s ease-in-out;*/
+  transition: all .1s ease-in-out;*/
   transition: all 0.1s cubic-bezier(0.02, 0.69, 0.11, 0.96);
   overflow-y: scroll;
+  overflow-x: hidden;
 
   & > section {
     
