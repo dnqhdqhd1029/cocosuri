@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <title>코코수리</title>
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://thekenwheeler.herokuapp.com/scripts/browserSwipe.js"></script>
+    <script src="https://thekenwheeler.herokuapp.com/scripts/touchswipe.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <style>
+        .intro {
+            width: 100%;
+            height: 100vh;
+            background-color: #EB7305;
+            color: #fff;
+            font-size: 22px;
+            line-height: 35px;
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            position: relative;
+            padding-top: 150px;
+            padding-left: 50px;
+            position: relative;
+
+
+        }
+
+        .intro:after {
+            content: "";
+            width: 443px;
+            height: 381px;
+            display: inline-block;
+            background: url(./assets/images/bg-men.svg) bottom center no-repeat;
+            background-size: contain;
+            position: absolute;
+            right: -97px;
+            bottom: -3px;
+        }
+
+        .intro .title {
+            font-size: 22px;
+            line-height: 35px;
+            font-weight: 400;
+        }
+
+        .intro .title b {
+            font-weight: 700;
+        }
+
+        .intro .txt {
+            width: 209px;
+            height: 52px;
+            margin-top: 20px;
+            margin-left: -15px;
+        }
+
+        .intro .txt img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <div class="intro">
+        <section class="home">
+            <div class="title">
+                우리집 고민 해결사 <br />
+                48시간 이내 출동<br />
+                <div class="txt">
+                    <img src="./assets/images/img-txt.png" alt="" />
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
