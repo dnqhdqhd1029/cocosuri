@@ -530,7 +530,7 @@
     </footer>
 
 
-    <div class="banner-container" style="display:block ;">
+    <div class="banner-container" id="banner" style="display:block ;">
         <div class="swiper bannerSlider">
             <div class="slide-wrap swiper-wrapper">
                 <div class="slide swiper-slide">
@@ -545,7 +545,7 @@
             <div class="swiper-pagination"> </div>
             <div class="btn-wrap">
                 <button class="today">오늘 그만보기</button>
-                <button class="close">닫기</button>
+                <button class="close" id="close" onclick="closeNav01()">닫기</button>
             </div>
         </div>
 
@@ -662,6 +662,12 @@ toggle between hiding and showing the dropdown content */
             //document.getElementById("mySidepanel").style.display = "none";
             var element = document.getElementById("mySidepanel");
             element.classList.remove("on");
+            var element1 = document.style.display = "none";
+        }
+
+        function closeNav01() {
+            var element = document.getElementById("banner").style.display = "none";
+
         }
     </script>
 
