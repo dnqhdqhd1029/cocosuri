@@ -17,6 +17,10 @@
 
 <body>
     <style>
+        body{
+            overflow-x:hidden ;
+            overflow-y: hidden;
+        }
         .intro {
             width: 100%;
             height: 100vh;
@@ -27,9 +31,9 @@
             font-weight: 400;
             display: flex;
             flex-direction: column;
-            justify-content: start;
+            justify-content: space-between;
             position: relative;
-            padding-top: 150px;
+            padding-top: 20%;
             padding-left: 50px;
             position: relative;
 
@@ -38,7 +42,7 @@
 
         .intro:after {
             content: "";
-            width: 443px;
+            width: 398px;
             height: 381px;
             display: inline-block;
             background: url(./assets/images/bg-men.svg) bottom center no-repeat;
