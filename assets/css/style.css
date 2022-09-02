@@ -356,17 +356,26 @@ footer .ic-write::before {
   background-color: #fff;
   text-align: left;
   bottom: 0;
-  padding: 13px 0 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
   font-size: 16px;
+  padding-left: 22px;
 }
 .banner-container .swiper .swiper-pagination .swiper-pagination-current {
   font-weight: 500;
+  letter-spacing: 5px;
 }
 .banner-container .swiper .btn-wrap {
   position: absolute;
-  right: 20px;
-  bottom: 10px;
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  bottom: 0;
   z-index: 100;
+  padding: 0 10px;
 }
 .banner-container .swiper .btn-wrap button {
   color: #666;
