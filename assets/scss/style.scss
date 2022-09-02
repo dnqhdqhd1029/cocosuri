@@ -33,6 +33,8 @@ img {
 body {
 
     overflow-x: hidden;
+    //overflow: hidden; 스크롤이벤트일때
+
 }
 
 header {
@@ -465,7 +467,9 @@ footer {
 
         //height: calc(100vh - 145px);
         //height: calc(var(--vh, 1vh) * 100 - 145px);
+        //height: 100vh 스크롤이벤트일때
         height: 100%;
+
         max-height: -webkit-fill-available;
         background-color: #fff;
         display: flex;
@@ -515,7 +519,7 @@ footer {
     .section01 {
         justify-content: space-between;
         position: relative;
-        padding-top: 10%;
+
 
         &:after {
             content: "";
@@ -532,6 +536,7 @@ footer {
         .title {
             line-height: 35px;
             font-size: 18px;
+            padding-top: 10%;
 
             b,
             strong {
@@ -914,7 +919,9 @@ footer {
     }
 
     .section10 {
-        padding-top: 10%;
+        .title {
+            padding-top: 10%;
+        }
 
         &::after {
             content: "";
