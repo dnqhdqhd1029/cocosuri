@@ -30,9 +30,7 @@ img {
 }
 
 body {
-    //height: 100vh;
-    // height: var(--vh, 1vh) * 100;
-    // overflow: hidden;
+
     overflow-x: hidden;
 }
 
@@ -321,7 +319,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     box-shadow: 2px 2px 10px rgba(102, 102, 102, 0.2);
-    display: none;
+
 
     button {
         font-size: 10px;
@@ -459,29 +457,22 @@ footer {
     transition: all 0.1s cubic-bezier(0.02, 0.69, 0.11, 0.96);
     overflow-y: scroll;
     overflow-x: hidden;
-
-    padding-top: 88px;
-    // height: 100%;
-    // min-height: 100vh;
-    // min-height: -webkit-fill-available;
-    height: calc(100vh - 56px);
-    // min-height: 100vh;
-    // min-height: -webkit-fill-available;
-    border: 3px solid red;
+    margin-top: 88px;
+    height: calc(var(--vh, 1vh) * 100 - 145px);
 
     &>section {
 
-        //height: calc(100vh - 90px);
-        height: calc(100vh - 145px);
-        //height: 100vh;
-        //height: 640px;
+        //height: calc(100vh - 145px);
+        //height: calc(var(--vh, 1vh) * 100 - 145px);
+        height: 100%;
         background-color: #fff;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
         position: relative;
         //padding-top: 120px;
+        border: 1px solid red;
 
         &:nth-child(odd) {
             background-color: #fef9f4;
@@ -489,10 +480,10 @@ footer {
 
         .title {
             width: 100%;
-            margin-bottom: 30px;
+            margin-bottom: 22px;
             font-size: 16px;
             color: #444;
-            padding: 0 38px;
+            padding: 0 0 0 38px;
             line-height: 30px;
             word-break: keep-all;
 
@@ -519,17 +510,18 @@ footer {
     .section01 {
         justify-content: space-between;
         position: relative;
+        padding-top: 10%;
 
         &:after {
             content: "";
             width: 100%;
             height: 381px;
             display: inline-block;
-            background: url(../images/bg-men.svg) 100px bottom no-repeat;
+            background: url(../images/bg-men.svg) right bottom no-repeat;
             background-size: contain;
-            // position: absolute;
-            // right: -67px;
-            // bottom: 0;
+            position: absolute;
+            right: -64px;
+            bottom: -3px;
         }
 
         .title {
@@ -766,16 +758,25 @@ footer {
     }
 
 
+    .section02 {
+        padding-top: 10%;
+        //height: calc(var(--vh, 1vh) * 100);
+    }
 
     .section03 {
-        justify-content: end;
-        //padding-top: 119px;
+
+        justify-content: stretchs;
+        //height: calc(var(--vh, 1vh) * 100 - 134px);
 
         div.img {
             height: 100%;
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             img {
-                height: 440px;
+                height: 80%;
             }
         }
     }
