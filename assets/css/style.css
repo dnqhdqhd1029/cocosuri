@@ -40,6 +40,7 @@ header .header {
   justify-content: flex-start;
   align-items: center;
   padding: 15px;
+  position: relative;
 }
 header .header .menu {
   width: 26px;
@@ -60,8 +61,12 @@ header .header .logo {
 }
 header .header div.search {
   padding: 0 10px;
+  height: 30px;
+  border-radius: 50px;
   flex: 1;
   text-align: right;
+  position: absolute;
+  right: 5px;
 }
 header .header div.search input[type=search] {
   border: none;
@@ -76,27 +81,32 @@ header .header div.search input[type=search]::placeholder {
   font-size: 14px;
 }
 header .header div.search .ic-search {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   background: url(../images/ic-search.svg) center center no-repeat;
   background-size: 24px;
   font-size: 0;
   text-indent: -9999px;
 }
 header .header div.search.on {
+  padding: 0 10px;
   height: 30px;
   background-color: #f8f8f8;
   border-radius: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 47%;
+  width: 86%;
   transition: all 0.2s;
+  position: absolute;
+  left: 45px;
+  right: 10px;
 }
 header .header div.search.on input[type=search] {
   display: block;
   opacity: 1;
   width: 80%;
+  height: 100%;
 }
 header nav {
   width: 100%;
@@ -240,6 +250,7 @@ header nav button.on {
 }
 
 footer {
+  display: none;
   position: fixed;
   left: 0;
   bottom: 0;
