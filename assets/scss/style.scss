@@ -313,7 +313,7 @@ footer {
     bottom: 0;
     z-index: 100;
     width: 100%;
-    height: 55px;
+    height: 70px;
     background-color: #fff;
     display: flex;
     justify-content: space-between;
@@ -374,7 +374,7 @@ footer {
         background-color: #eb7305;
         border-radius: 50%;
         color: #fff;
-        margin-bottom: 25px;
+        margin-bottom: 40px;
         font-weight: 700;
         padding-top: 5px;
         box-shadow: 2px 2px 10px rgba(102, 102, 102, 0.2);
@@ -453,12 +453,12 @@ footer {
 
 .main {
     /*user-select: none;
-  transition: all .1s ease-in-out;*/
+    transition: all .1s ease-in-out;*/
     transition: all 0.1s cubic-bezier(0.02, 0.69, 0.11, 0.96);
     overflow-y: scroll;
     overflow-x: hidden;
     margin-top: 88px;
-    height: calc(var(--vh, 1vh) * 100 - 145px);
+    height: calc(var(--vh, 1vh) * 100 - 143px);
 
     &>section {
 
@@ -474,6 +474,7 @@ footer {
         //padding-top: 120px;
         border: 1px solid red;
 
+
         &:nth-child(odd) {
             background-color: #fef9f4;
         }
@@ -486,6 +487,7 @@ footer {
             padding: 0 0 0 38px;
             line-height: 30px;
             word-break: keep-all;
+
 
             span {
                 font-weight: 500;
@@ -521,7 +523,7 @@ footer {
             background-size: contain;
             position: absolute;
             right: -64px;
-            bottom: -3px;
+            bottom: 0;
         }
 
         .title {
@@ -544,6 +546,30 @@ footer {
                 background-color: #eb7305;
                 margin-top: 20px;
                 display: block;
+            }
+        }
+    }
+
+    .section02 {
+        justify-content: center;
+        //height: calc(var(--vh, 1vh) * 100 - 51px);
+
+    }
+
+    .section03 {
+
+        justify-content: stretch;
+        //height: calc(var(--vh, 1vh) * 100 - 134px);
+
+        div.img {
+            height: 100%;
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                height: 80%;
             }
         }
     }
@@ -758,28 +784,9 @@ footer {
     }
 
 
-    .section02 {
-        padding-top: 10%;
-        //height: calc(var(--vh, 1vh) * 100);
-    }
 
-    .section03 {
 
-        justify-content: stretchs;
-        //height: calc(var(--vh, 1vh) * 100 - 134px);
 
-        div.img {
-            height: 100%;
-            border: 1px solid red;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-                height: 80%;
-            }
-        }
-    }
 
     .section06 {
         justify-content: center;
@@ -1102,8 +1109,9 @@ footer {
     .video-container {
         position: relative;
         width: 100%;
-        height: 360px;
-        padding-top: 50%;
+        height: 100%;
+        // /padding-top: 50%;
+        padding-bottom: 56.25%;
     }
 
     iframe {
@@ -1113,6 +1121,11 @@ footer {
         position: absolute;
         width: 100%;
         height: 100%;
+
+        .ytp-cued-thumbnail-overlay {
+            border: 1px solid red;
+            height: 60%;
+        }
     }
 }
 
@@ -1466,7 +1479,7 @@ footer {
     }
 
     .main .section03 div.img img {
-        height: 340px;
+        //height: 340px;
     }
 
     .main .section11 .cont .flex-justify {
