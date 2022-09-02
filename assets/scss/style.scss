@@ -434,10 +434,13 @@ footer {
     transition: all 0.1s cubic-bezier(0.02, 0.69, 0.11, 0.96);
     overflow-y: scroll;
     overflow-x: hidden;
+    height: 100%;
+    border: 1px solid red;
 
     &>section {
 
-        height: calc(100vh - 55px);
+        height: calc(100vh - 56px);
+        border: 1px solid red;
         //height: 100vh;
         //height: 640px;
         background-color: #fff;
