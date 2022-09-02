@@ -17,6 +17,17 @@
 
 <body>
     <style>
+        :root {
+            --vh: 100%;
+        }
+
+        html,
+        body {
+            height: 100vh;
+            height: var(--vh);
+            height: calc(var(--vh, 1vh) * 100)
+        }
+
         body {
             overflow-x: hidden;
             overflow-y: hidden;
@@ -97,7 +108,19 @@
             </div>
         </section>
     </div>
+    <script>
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+        window.addEventListener('resize', () => {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
+        window.addEventListener('touchend', () => {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
+    </script>
 </body>
 
 </html>

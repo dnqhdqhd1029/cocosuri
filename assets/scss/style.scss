@@ -16,6 +16,7 @@ body {
     color: #666;
     word-spacing: -2px;
     //border: 1px solid #000;
+    height: var(--vh, 1vh) * 100;
 }
 
 img {
@@ -23,9 +24,10 @@ img {
 }
 
 body {
-    height: 100vh;
+    //height: 100vh;
     // height: var(--vh, 1vh) * 100;
     // overflow: hidden;
+    height: var(--vh, 1vh) * 100;
 }
 
 header {
