@@ -359,21 +359,19 @@ footer .ic-write::before {
   transition: all 0.1s cubic-bezier(0.02, 0.69, 0.11, 0.96);
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 100%;
-  border: 1px solid #000;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  padding-top: 88px;
+  height: calc(100vh - 56px);
+  border: 1px solid blue;
 }
 .main > section {
-  height: calc(100vh - 56px);
   border: 1px solid red;
+  height: 100%;
   background-color: #fff;
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: column;
   position: relative;
-  padding-top: 120px;
 }
 .main > section:nth-child(odd) {
   background-color: #fef9f4;
@@ -403,7 +401,7 @@ footer .ic-write::before {
   margin-top: 20px;
 }
 .main .section01 {
-  justify-content: start;
+  justify-content: space-between;
   position: relative;
 }
 .main .section01:after {
