@@ -18,11 +18,12 @@ body {
     height: 100%;
     overflow-x: hidden;
     color: #666;
-    word-spacing: -2px;
+    word-spacing: -5px;
     //border: 1px solid #000;
     height: 100vh;
     height: var(--vh);
-    height: calc(var(--vh, 1vh) * 100)
+    height: calc(var(--vh, 1vh) * 100);
+    font-size: 16px;
 }
 
 img {
@@ -375,7 +376,7 @@ footer {
         border-radius: 50%;
         color: #fff;
         margin-bottom: 40px;
-        font-weight: 700;
+        font-weight: 600;
         padding-top: 5px;
         box-shadow: 2px 2px 10px rgba(102, 102, 102, 0.2);
 
@@ -458,13 +459,14 @@ footer {
     overflow-y: scroll;
     overflow-x: hidden;
     margin-top: 88px;
-    height: calc(var(--vh, 1vh) * 100 - 143px);
+    height: calc(var(--vh, 1vh) * 100 - 160px);
 
     &>section {
 
         //height: calc(100vh - 145px);
         //height: calc(var(--vh, 1vh) * 100 - 145px);
         height: 100%;
+        max-height: -webkit-fill-available;
         background-color: #fff;
         display: flex;
         justify-content: center;
@@ -472,7 +474,8 @@ footer {
         flex-direction: column;
         position: relative;
         //padding-top: 120px;
-        border: 1px solid red;
+        // /transform: translateY(calc(var(--vh, 1vh)));
+        transition: transform 0.9s ease 0s;
 
 
         &:nth-child(odd) {
@@ -497,14 +500,14 @@ footer {
 
             b {
                 display: inline-block;
-                font-weight: 700;
+                font-weight: 600;
                 font-size: 26px;
             }
 
             p {
                 font-size: 16px;
                 line-height: 22px;
-                margin-top: 20px;
+                margin-top: 10px;
             }
         }
     }
@@ -563,19 +566,18 @@ footer {
 
         div.img {
             height: 100%;
-            border: 1px solid red;
             display: flex;
             justify-content: center;
             align-items: center;
 
             img {
-                height: 80%;
+                height: 70%;
             }
         }
     }
 
     .slide-container {
-        justify-content: start;
+        justify-content: center;
 
         .title {
             padding: 0 40px;
@@ -669,6 +671,52 @@ footer {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .section05 {
+        justify-content: center;
+    }
+
+    .section06 {
+        justify-content: center;
+        align-items: start;
+        position: relative;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 162px;
+            height: 162px;
+            background: url(../images/ic-bg-info01.svg) right center no-repeat;
+            background-size: contain;
+            position: absolute;
+            right: -9px;
+            bottom: 48px;
+        }
+
+        ul {
+            margin-left: 34px;
+            width: 60%;
+        }
+
+        ul li {
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            margin-bottom: 30px;
+            word-break: keep-all;
+
+            i {
+                display: inline-block;
+                margin-right: 5px;
+            }
+
+            span {
+                color: #eb7305;
+                font-weight: 500;
+                display: inline;
             }
         }
     }
@@ -784,51 +832,6 @@ footer {
     }
 
 
-
-
-
-
-    .section06 {
-        justify-content: center;
-        align-items: start;
-        position: relative;
-
-        &:after {
-            content: "";
-            display: inline-block;
-            width: 162px;
-            height: 162px;
-            background: url(../images/ic-bg-info01.svg) center center no-repeat;
-            background-size: contain;
-            position: absolute;
-            right: 0;
-            bottom: 10%;
-        }
-
-        ul {
-            margin-left: 34px;
-            width: 60%;
-        }
-
-        ul li {
-            display: flex;
-            justify-content: start;
-            align-items: start;
-            margin-bottom: 30px;
-
-            i {
-                display: inline-block;
-                margin-right: 5px;
-            }
-
-            span {
-                color: #eb7305;
-                font-weight: 500;
-                display: inline;
-            }
-        }
-    }
-
     .section07 {
         h2 {
             font-weight: 600;
@@ -903,7 +906,7 @@ footer {
                     margin-left: 10px;
 
                     dt {
-                        font-weight: 600;
+                        font-weight: 500;
                     }
                 }
             }
@@ -911,13 +914,15 @@ footer {
     }
 
     .section10 {
+        padding-top: 10%;
+
         &::after {
             content: "";
             display: inline-block;
             width: 516px;
             height: 258px;
-            background: url(../images/ic-bg-car.svg) left top;
-            background-size: 516px 258px;
+            background: url(../images/ic-bg-car.svg) left bottom no-repeat;
+            background-size: auto 80%;
             animation: 10s linear slide infinite;
 
             // position: absolute;
@@ -1140,6 +1145,7 @@ footer {
 
         .swiper-wrapper {
             //justify-content: center;
+            //transform: translate3d(-270px, 0px, 0px);
         }
 
         .slide {
@@ -1339,7 +1345,7 @@ footer {
     }
 
     .main>section {
-        padding-top: 200px;
+        //padding-top: 200px;
     }
 
     .main>section .title {
@@ -1386,9 +1392,7 @@ footer {
         height: 300px;
     }
 
-    .main .section06 {
-        justify-content: start;
-    }
+
 
     .main .section06:after {
         width: 262px;
@@ -1435,10 +1439,15 @@ footer {
 
     .main .section11 .cont {
         width: 90%;
+
+        .flex-justify {
+            line-height: 24px;
+        }
     }
 
     .main .section12 div.list {
         width: 90%;
+
     }
 
     .main .section13 div.sns button {
@@ -1478,12 +1487,50 @@ footer {
         font-size: 26px;
     }
 
+    .main>section .title p {
+        margin-top: 10px;
+    }
+
+    .main .section02 {
+        justify-content: space-around;
+        padding-top: 10%;
+    }
+
     .main .section03 div.img img {
         //height: 340px;
     }
 
+    .main .section06:after {
+        background-size: auto 63%;
+    }
+
+    .main .section07 .cont {
+        min-height: 250px;
+    }
+
+    .main .section08 .cont {
+        padding: 10px;
+    }
+
+    .main .section08 .cont ul li {
+        margin-bottom: 10px;
+    }
+
+    .main .section10::after {
+        height: 150px;
+    }
+
+    .main .section11 .cont {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
     .main .section11 .cont .flex-justify {
         font-size: 12px;
+    }
+
+    .main .section12 div.list button {
+        margin-bottom: 10px;
     }
 
     .main .marster-container .swiper .slide-wrap .slide .flex-justify>div span {
@@ -1492,6 +1539,14 @@ footer {
 
     .main .marster-container .swiper .slide-wrap .slide .flex-justify>div ul li {
         font-size: 12px;
+    }
+
+    .main .slide-container .swiper {
+        //height: 240px;
+    }
+
+    .main .slide-container .swiper .slide-wrap .slide {
+        //height: 240px;
     }
 }
 
