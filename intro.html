@@ -17,10 +17,11 @@
 
 <body>
     <style>
-        body{
-            overflow-x:hidden ;
+        body {
+            overflow-x: hidden;
             overflow-y: hidden;
         }
+
         .intro {
             width: 100%;
             height: 100vh;
@@ -42,14 +43,15 @@
 
         .intro:after {
             content: "";
-            width: 398px;
-            height: 381px;
+            width: 100%;
+            height: 437px;
             display: inline-block;
-            background: url(./assets/images/bg-men.svg) bottom center no-repeat;
-            background-size: contain;
-            position: absolute;
+            background: url(./assets/images/bg-men.svg) left bottom no-repeat;
+            background-size: auto 80%;
+            /* position: absolute;
             right: -97px;
-            bottom: -3px;
+            bottom: -3px; */
+            margin-bottom: -2px;
         }
 
         .intro .title {
