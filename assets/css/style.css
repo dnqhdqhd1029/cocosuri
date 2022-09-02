@@ -742,6 +742,7 @@ footer .ic-write::before {
 }
 .main .section10 .title {
   padding-top: 10%;
+  margin-bottom: 0;
 }
 .main .section10::after {
   content: "";
@@ -749,7 +750,7 @@ footer .ic-write::before {
   width: 516px;
   height: 258px;
   background: url(../images/ic-bg-car.svg) left bottom no-repeat;
-  background-size: auto 80%;
+  background-size: auto 100%;
   animation: 10s linear slide infinite;
 }
 .main .section11 .cont {
@@ -1230,6 +1231,7 @@ footer .ic-write::before {
   }
   .main .section10::after {
     height: 150px;
+    background-size: auto 80%;
   }
   .main .section11 .cont {
     margin-bottom: 10px;
