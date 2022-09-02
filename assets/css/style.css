@@ -361,9 +361,7 @@ footer .ic-write::before {
   overflow-x: hidden;
   padding-top: 88px;
   height: calc(100vh - 56px);
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-  border: 3px solid blue;
+  border: 3px solid red;
 }
 .main > section {
   height: calc(100vh - 145px);
