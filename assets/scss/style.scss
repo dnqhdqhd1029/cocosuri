@@ -948,6 +948,11 @@ footer {
             margin: 0 auto;
             padding: 15px;
             margin-bottom: 30px;
+            min-height: 140px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
 
             .tit {
                 font-size: 16px;
@@ -1529,13 +1534,20 @@ footer {
         background-size: auto 80%;
     }
 
+    .main .section11 .cont .tit {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
     .main .section11 .cont {
         margin-bottom: 10px;
         padding: 10px;
+        min-height: 120px;
     }
 
     .main .section11 .cont .flex-justify {
         font-size: 12px;
+        margin-top: 5px;
     }
 
     .main .section12 div.list button {
