@@ -361,14 +361,15 @@ footer .ic-write::before {
   overflow-x: hidden;
   padding-top: 88px;
   height: calc(100vh - 56px);
-  border: 1px solid blue;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  border: 3px solid blue;
 }
 .main > section {
-  border: 1px solid red;
-  height: 100%;
+  height: calc(100vh - 145px);
   background-color: #fff;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   position: relative;
@@ -597,7 +598,9 @@ footer .ic-write::before {
 }
 .main .section03 {
   justify-content: end;
-  padding-top: 119px;
+}
+.main .section03 div.img {
+  height: 100%;
 }
 .main .section03 div.img img {
   height: 440px;
@@ -1159,9 +1162,6 @@ footer .ic-write::before {
   }
   .side-menu .menu nav button {
     padding: 10px 8px;
-  }
-  .main > section {
-    padding-top: 114px;
   }
   .main .section01 .title {
     line-height: 35px;

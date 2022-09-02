@@ -440,18 +440,19 @@ footer {
     // min-height: 100vh;
     // min-height: -webkit-fill-available;
     height: calc(100vh - 56px);
-    border: 1px solid blue;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    border: 3px solid blue;
 
     &>section {
 
         //height: calc(100vh - 90px);
-        border: 1px solid red;
-        height: 100%;
+        height: calc(100vh - 145px);
         //height: 100vh;
         //height: 640px;
         background-color: #fff;
         display: flex;
-        justify-content: start;
+        justify-content: space-between;
         align-items: center;
         flex-direction: column;
         position: relative;
@@ -743,9 +744,11 @@ footer {
 
     .section03 {
         justify-content: end;
-        padding-top: 119px;
+        //padding-top: 119px;
 
         div.img {
+            height: 100%;
+
             img {
                 height: 440px;
             }
@@ -1423,7 +1426,7 @@ footer {
     }
 
     .main>section {
-        padding-top: 114px;
+        //padding-top: 114px;
     }
 
     .main .section01 .title {
