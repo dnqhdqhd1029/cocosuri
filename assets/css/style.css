@@ -476,10 +476,10 @@ footer .ic-write::before {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
 }
 .main .section03 div.img img {
-  height: 70%;
+  height: 80%;
 }
 .main .slide-container {
   justify-content: center;
