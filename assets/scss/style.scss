@@ -169,7 +169,8 @@ header {
 .side-menu {
     //display: none;
     position: fixed;
-    width: 100%;
+    //width: 100%;
+    width: 30%;
     left: 0;
     top: 0;
     height: 100vh;
@@ -180,6 +181,7 @@ header {
 
     &.on {
         opacity: 1;
+        width: 100%;
         transition: 0.5s;
         z-index: 300;
     }
@@ -198,6 +200,7 @@ header {
     }
 
     .menu {
+        position: fixed;
         width: 70%;
         height: 100vh;
         background-color: #fff;
