@@ -1,0 +1,1274 @@
+@charset "UTF-8";
+@import url("font.css");
+@import url("default.css");
+:root {
+  --vh: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: 16px;
+  line-height: 160%;
+  font-family: "NotoKr", "AppleSDGothicNeo", sans-serif;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  color: #666;
+  word-spacing: -5px;
+  height: 100vh;
+  height: var(--vh);
+  height: calc(var(--vh, 1vh) * 100);
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+  height: 80px;
+}
+header .header {
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+}
+header .header .menu {
+  width: 26px;
+  height: 26px;
+  font-size: 0;
+  background: url(../images/ic-menu.png) center center no-repeat;
+  background-size: 26px;
+}
+header .header .logo {
+  width: 128px;
+  height: 26px;
+  background: url(../images/ic-logo.svg) center center no-repeat;
+  background-size: contain;
+  margin-left: 10px;
+  margin-right: 5px;
+  font-size: 0;
+  text-indent: -9999px;
+}
+header .header div.search {
+  padding: 0 10px;
+  height: 30px;
+  border-radius: 50px;
+  flex: 1;
+  text-align: right;
+  position: absolute;
+  right: 0;
+}
+header .header div.search input[type=search] {
+  border: none;
+  height: 100%;
+  background-color: transparent;
+  font-size: 14px;
+  display: none;
+  opacity: 0;
+}
+header .header div.search input[type=search]::placeholder {
+  color: #666;
+  font-size: 14px;
+}
+header .header div.search .ic-search {
+  width: 30px;
+  height: 30px;
+  background: url(../images/ic-search.svg) center center no-repeat;
+  background-size: 24px;
+  font-size: 0;
+  text-indent: -9999px;
+}
+header .header div.search.on {
+  padding: 0 10px;
+  height: 30px;
+  background-color: #f8f8f8;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  transition: all 0.2s;
+  position: absolute;
+  left: 45px;
+  right: 5px;
+}
+header .header div.search.on input[type=search] {
+  display: block;
+  opacity: 1;
+  width: 80%;
+  height: 100%;
+}
+header .header div.search.on .ic-search {
+  background-position: right center;
+}
+header nav {
+  width: 100%;
+  height: 49px;
+  background-color: #fff;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 15px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  z-index: 100;
+}
+header nav button {
+  min-width: 90px;
+  padding: 0 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #444;
+  font-weight: 500;
+  font-size: 16px;
+  height: 35px;
+  border-radius: 10px;
+}
+header nav button.on {
+  background-color: #eb7305;
+  color: #fff;
+}
+
+.side-menu {
+  position: fixed;
+  width: 30%;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  overflow-x: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.side-menu.on {
+  opacity: 1;
+  width: 100%;
+  transition: 0.5s;
+  z-index: 300;
+}
+.side-menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.side-menu .menu {
+  position: fixed;
+  width: 70%;
+  height: 100vh;
+  background-color: #fff;
+  padding: 30px 19px;
+}
+.side-menu .menu .logo {
+  width: 166px;
+  height: 18px;
+  background: url(../images/ic-logo.svg) center center no-repeat;
+  background-size: contain;
+}
+.side-menu .menu .close {
+  width: 26px;
+  height: 26px;
+  background: url(../images/ic-close.svg) center center no-repeat;
+  background-size: contain;
+}
+.side-menu .menu button.login {
+  display: block;
+  width: 100%;
+  height: 55px;
+  border-radius: 10px;
+  background-color: rgba(250, 224, 200, 0.2);
+  padding: 16px 20px;
+  margin: 25px 0;
+  color: #0c274a;
+  font-size: 16px;
+  text-align: left;
+}
+.side-menu .menu button.login b {
+  color: #000;
+}
+.side-menu .menu nav {
+  padding: 0;
+}
+.side-menu .menu nav button {
+  width: 100%;
+  padding: 10px 20px;
+  display: block;
+  text-align: left;
+  color: #eb7305;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.side-menu .menu nav button::before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin-right: 10px;
+}
+.side-menu .menu nav button.ic-home::before {
+  background: url(../images/ic-home.png) center center no-repeat;
+  background-size: auto 24px;
+}
+.side-menu .menu nav button.ic-store::before {
+  background: url(../images/ic-store.png) center center no-repeat;
+  background-size: auto 24px;
+}
+.side-menu .menu nav button.ic-community::before {
+  background: url(../images/ic-community.png) center center no-repeat;
+  background-size: auto 24px;
+}
+.side-menu .menu nav button.ic-driver::before {
+  background: url(../images/ic-driver.png) center center no-repeat;
+  background-size: auto 24px;
+}
+.side-menu .menu nav button.ic-service::before {
+  background: url(../images/ic-service.png) center center no-repeat;
+  background-size: auto 24px;
+}
+.side-menu .menu .lnb {
+  border-top: 1px solid #f5f5f5;
+  padding: 20px 20px;
+  margin-top: 20px;
+}
+.side-menu .menu .lnb button {
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 0;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 10px rgba(102, 102, 102, 0.2);
+}
+footer button {
+  font-size: 10px;
+  font-weight: 400;
+  width: 15%;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+footer button::before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin-bottom: 5px;
+}
+footer .ic-home::before {
+  background: url(../images/ic-foot-home.svg) center center no-repeat;
+  background-size: 26px;
+}
+footer .ic-store::before {
+  background: url(../images/ic-foot-store.svg) center center no-repeat;
+  background-size: 26px;
+}
+footer .ic-community::before {
+  background: url(../images/ic-foot-community.svg) center center no-repeat;
+  background-size: 26px;
+}
+footer .ic-mypage::before {
+  background: url(../images/ic-foot-mypage.svg) center center no-repeat;
+  background-size: 26px;
+}
+footer .ic-write {
+  width: 60px;
+  height: 60px;
+  background-color: #eb7305;
+  border-radius: 50%;
+  color: #fff;
+  margin-bottom: 40px;
+  font-weight: 600;
+  padding-top: 5px;
+  box-shadow: 2px 2px 10px rgba(102, 102, 102, 0.2);
+}
+footer .ic-write::before {
+  background: url(../images/ic-write.svg) center center no-repeat;
+  background-size: 26px;
+}
+
+.banner-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 230px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  overflow: hidden;
+  z-index: 100;
+}
+.banner-container .swiper {
+  width: 100%;
+  height: 230px;
+  position: relative;
+}
+.banner-container .swiper .slide {
+  height: 180px;
+}
+.banner-container .swiper .slide button {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.banner-container .swiper .slide button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner-container .swiper .swiper-pagination {
+  height: 50px;
+  background-color: #fff;
+  text-align: left;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 16px;
+  padding-left: 22px;
+}
+.banner-container .swiper .swiper-pagination .swiper-pagination-current {
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+.banner-container .swiper .btn-wrap {
+  position: absolute;
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  padding: 0 10px;
+}
+.banner-container .swiper .btn-wrap button {
+  color: #666;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.main {
+  /*user-select: none;
+  transition: all .1s ease-in-out;*/
+  transition: all 0.1s cubic-bezier(0.02, 0.69, 0.11, 0.96);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-top: 88px;
+  height: calc(var(--vh, 1vh) * 100 - 160px);
+}
+.main > section {
+  height: 100%;
+  max-height: -webkit-fill-available;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.9s ease 0s;
+}
+.main > section:nth-child(odd) {
+  background-color: #fef9f4;
+}
+.main > section .title {
+  width: 100%;
+  margin-bottom: 22px;
+  font-size: 16px;
+  color: #444;
+  padding: 0 0 0 38px;
+  line-height: 30px;
+  word-break: keep-all;
+}
+.main > section .title span {
+  font-weight: 500;
+  font-size: 18px;
+  display: inline-block;
+}
+.main > section .title b {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 26px;
+}
+.main > section .title p {
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 10px;
+}
+.main .section01 {
+  justify-content: space-between;
+  position: relative;
+}
+.main .section01:after {
+  content: "";
+  width: 100%;
+  height: 381px;
+  display: inline-block;
+  background: url(../images/bg-men.svg) right bottom no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: -64px;
+  bottom: 0;
+}
+.main .section01 .title {
+  line-height: 35px;
+  font-size: 18px;
+  padding-top: 10%;
+}
+.main .section01 .title b,
+.main .section01 .title strong {
+  font-size: 30px;
+}
+.main .section01 .title button {
+  width: 115px;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #eb7305;
+  margin-top: 20px;
+  display: block;
+}
+.main .section02 {
+  justify-content: center;
+}
+.main .section03 {
+  justify-content: stretch;
+}
+.main .section03 div.img {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.main .section03 div.img img {
+  height: 80%;
+}
+.main .slide-container {
+  justify-content: center;
+}
+.main .slide-container .title {
+  padding: 0 40px;
+}
+.main .slide-container .swiper {
+  width: 100%;
+  height: 308px;
+}
+.main .slide-container .swiper .slide-wrap .slide {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 4px 3px 7px rgba(102, 102, 102, 0.2);
+  height: 300px;
+  /*margin-right: 20px;*/
+  width: 207px !important;
+  padding: 15px;
+  position: relative;
+}
+.main .slide-container .swiper .slide-wrap .slide div.img {
+  border-radius: 9px;
+  overflow: hidden;
+  width: 177px;
+  height: 133px;
+  margin-bottom: 10px;
+}
+.main .slide-container .swiper .slide-wrap .slide div.img img {
+  width: 100%;
+  height: 100%;
+}
+.main .slide-container .swiper .slide-wrap .slide .description .flex-justify .round {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+}
+.main .slide-container .swiper .slide-wrap .slide .description .flex-justify .round.bg-blue {
+  background-color: #0c274a;
+}
+.main .slide-container .swiper .slide-wrap .slide .description .flex-justify .round.bg-green {
+  background-color: #4d855e;
+}
+.main .slide-container .swiper .slide-wrap .slide .description .flex-justify .ic-start {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+  color: #444;
+  font-weight: 500;
+}
+.main .slide-container .swiper .slide-wrap .slide .description .flex-justify .ic-start i {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../images/ic-favorite.svg) center center no-repeat;
+  background-size: contain;
+}
+.main .slide-container .swiper .slide-wrap .slide .description .text {
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: left;
+  line-height: 17px;
+}
+.main .slide-container .swiper .slide-wrap .slide .description .date {
+  width: 100%;
+  text-align: right;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-size: 12px;
+}
+.main .section05 {
+  justify-content: center;
+}
+.main .section06 {
+  justify-content: center;
+  align-items: start;
+  position: relative;
+}
+.main .section06:after {
+  content: "";
+  display: inline-block;
+  width: 162px;
+  height: 162px;
+  background: url(../images/ic-bg-info01.svg) right center no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: -9px;
+  bottom: 48px;
+}
+.main .section06 ul {
+  margin-left: 34px;
+  width: 60%;
+}
+.main .section06 ul li {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin-bottom: 30px;
+  word-break: keep-all;
+}
+.main .section06 ul li i {
+  display: inline-block;
+  margin-right: 5px;
+}
+.main .section06 ul li span {
+  color: #eb7305;
+  font-weight: 500;
+  display: inline;
+}
+.main .marster-container {
+  justify-content: center;
+}
+.main .marster-container .title {
+  padding: 0 40px;
+}
+.main .marster-container .swiper {
+  width: 100%;
+  height: 210px;
+}
+.main .marster-container .swiper .slide-wrap .slide {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  box-shadow: -1px 1px 12px rgba(102, 102, 102, 0.2);
+  /*margin-right: 20px;*/
+  width: 283px !important;
+  height: 185px;
+  padding: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .marster-container .swiper .slide-wrap .slide .flex-justify > div:last-child {
+  border-left: 1px solid #d9d9d9;
+  margin-left: 15px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.main .marster-container .swiper .slide-wrap .slide .flex-justify > div {
+  flex: 1;
+  height: 125px;
+}
+.main .marster-container .swiper .slide-wrap .slide .flex-justify > div ul li {
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+.main .marster-container .swiper .slide-wrap .slide .flex-justify > div i.marster {
+  display: inline-block;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.main .marster-container .swiper .slide-wrap .slide .flex-justify > div i.marster01 {
+  background: url(../images/ic-marster01.svg) center center no-repeat;
+  background-size: cover;
+}
+.main .marster-container .swiper .slide-wrap .slide .flex-justify > div i.marster02 {
+  background: url(../images/ic-marster02.svg) center center no-repeat;
+  background-size: cover;
+}
+.main .marster-container .swiper .slide-wrap .slide .flex-justify > div i.marster03 {
+  background: url(../images/ic-marster03.svg) center center no-repeat;
+  background-size: cover;
+}
+.main .marster-container .swiper .slide-wrap .slide .flex-justify > div i.marster04 {
+  background: url(../images/ic-marster04.svg) center center no-repeat;
+  background-size: cover;
+}
+.main .marster-container .swiper .slide-wrap .slide .flex-justify > div span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #444444;
+}
+.main .marster-container .swiper .slide-wrap .slide .flex-justify > div .ic-start {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+  color: #444;
+  font-weight: 500;
+  height: 20px;
+  font-size: 14px;
+}
+.main .marster-container .swiper .slide-wrap .slide .flex-justify > div .ic-start i {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../images/ic-favorite.svg) center center no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+.main .section07 h2 {
+  font-weight: 600;
+  font-size: 26px;
+  color: #203a62;
+  text-align: left;
+  width: 80%;
+  padding: 0 0;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  position: relative;
+}
+.main .section07 h2 button.btn {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  font-size: 14px;
+  background: url(../images/ic-arrow-next.png) right -1px no-repeat;
+  padding-right: 20px;
+  background-size: auto 16px;
+}
+.main .section07 .cont {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  width: 80%;
+  min-height: 320px;
+  margin: 0 auto;
+}
+.main .section08 .cont {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  width: 82%;
+  margin: 0 auto;
+  padding: 30px 20px 10px 20px;
+}
+.main .section08 .cont ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.main .section08 .cont ul li i {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+}
+.main .section08 .cont ul li .ic-01 {
+  background: url(../images/ic-bg-info04.svg) center center no-repeat;
+  background-size: contain;
+}
+.main .section08 .cont ul li .ic-02 {
+  background: url(../images/ic-bg-info02.svg) center center no-repeat;
+  background-size: contain;
+}
+.main .section08 .cont ul li .ic-03 {
+  background: url(../images/ic-bg-info03.svg) center center no-repeat;
+  background-size: contain;
+}
+.main .section08 .cont ul li dl {
+  flex: 1;
+  margin-left: 10px;
+}
+.main .section08 .cont ul li dl dt {
+  font-weight: 500;
+}
+.main .section10 .title {
+  padding-top: 10%;
+  margin-bottom: 0;
+}
+.main .section10::after {
+  content: "";
+  display: inline-block;
+  width: 516px;
+  height: 258px;
+  background: url(../images/ic-bg-car.svg) left bottom no-repeat;
+  background-size: auto 100%;
+  animation: 10s linear slide infinite;
+}
+.main .section11 .cont {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  width: 82%;
+  margin: 0 auto;
+  padding: 15px;
+  margin-bottom: 30px;
+  min-height: 140px;
+}
+.main .section11 .cont:last-child {
+  margin-bottom: 0;
+}
+.main .section11 .cont .tit {
+  font-size: 16px;
+  line-height: 23px;
+  color: #203a62;
+  font-weight: 500;
+}
+.main .section11 .cont .flex-justify {
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 15px;
+}
+.main .section11 .cont .flex-justify .btn {
+  width: 95px;
+  height: 40px;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.main .section11 .cont .flex-justify .btn.bg-blue {
+  background-color: #203a62;
+}
+.main .section11 .cont .flex-justify .btn.bg-orange {
+  background-color: #eb7305;
+}
+.main .section12 div.list {
+  width: 80%;
+  margin: 0 auto;
+}
+.main .section12 div.list button {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  height: 50px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.main .section13 {
+  align-items: start;
+}
+.main .section13 div.txt {
+  width: 100%;
+  margin-left: 38px;
+  color: #203a62;
+  font-size: 16px;
+}
+.main .section13 div.sns {
+  width: 100%;
+  margin-left: 38px;
+  margin-top: 20px;
+}
+.main .section13 div.sns button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.main .section13 div.sns .ic-instar {
+  background: url(../images/ic-logo-instar.svg) center center no-repeat;
+  background-size: contain;
+}
+.main .section13 div.sns .ic-blog {
+  background: url(../images/ic-logo-blog.svg) center center no-repeat;
+  background-size: contain;
+}
+.main .section13 div.sns .ic-youtube {
+  background: url(../images/ic-logo-youtube.svg) center center no-repeat;
+  background-size: contain;
+}
+.main .section13 div.sns .ic-cocorio {
+  background: url(../images/ic-logo-cco.svg) center center no-repeat;
+  background-size: contain;
+}
+@keyframes slide {
+  from {
+    transform: translateX(350px);
+  }
+  to {
+    transform: translateX(-516px);
+  }
+}
+.main .footer-container {
+  align-items: start;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.main .footer-container .fnb {
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: start;
+}
+.main .footer-container .fnb button {
+  flex: 1;
+  font-size: 11px;
+  text-align: center;
+  display: inline-block;
+}
+.main .footer-container .bg-gray {
+  background-color: #666;
+  color: #fff;
+}
+.main .footer-container .info {
+  padding: 10px;
+}
+.main .footer-container .info span {
+  font-size: 12px;
+}
+.main .footer-container .address {
+  padding: 10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+.main .footer-container .address .font10 {
+  font-size: 10px;
+  margin-top: 20px;
+}
+
+#output {
+  position: fixed;
+  line-height: 1;
+  bottom: 10px;
+  right: 10px;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #fff;
+  width: 200px;
+  text-align: right;
+}
+
+.video {
+  width: 100%;
+  max-width: 900px;
+  height: 360px;
+}
+.video .video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 56.25%;
+}
+.video iframe {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.video iframe .ytp-cued-thumbnail-overlay {
+  border: 1px solid red;
+  height: 60%;
+}
+
+/*before-container*/
+.before-container .swiper {
+  width: 100%;
+  height: 200px;
+}
+.before-container .swiper .slide {
+  width: 280px !important;
+}
+
+.before-after-img-box {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100% !important;
+  /*padding-top: 56.25%;*/
+  border-radius: 10px;
+  overflow: hidden;
+  height: 185px;
+}
+
+.before-after-img-box .before-after-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.before-after-img-box .before-box {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+}
+
+.before-after-img-box .after-box {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  align-self: flex-end;
+  width: 50%;
+  height: 100%;
+  border-left: 2px solid #fff;
+}
+
+.before-after-img-box .img-box {
+  z-index: 1;
+  position: absolute;
+  width: 800px;
+  height: 100%;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.before-after-img-box .img-box:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #000 0%, #000 8%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0.2;
+}
+
+.before-after-img-box .after-box .img-box:after {
+  background: linear-gradient(-90deg, #000 0%, #000 8%, rgba(0, 0, 0, 0) 100%);
+}
+
+.before-after-img-box .img-box img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.before-after-img-box .lb-name {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  padding: 0 8px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 9px 0px;
+  text-transform: capitalize;
+}
+
+.before-after-img-box .before-box .lb-name {
+  left: 0;
+  background-color: #203a62;
+}
+
+.before-after-img-box .after-box .lb-name {
+  right: 0;
+  background-color: #eb7305;
+  border-radius: 0px 9px;
+}
+
+.before-after-img-box .before-box .img-box {
+  left: 0;
+}
+
+.before-after-img-box .after-box .img-box {
+  right: 0;
+  background-position: top right;
+}
+
+.before-after-img-box ~ .interior-link {
+  top: 450px;
+  bottom: 0;
+  height: auto;
+}
+
+.before-after-img-box .btn-drag {
+  z-index: 5;
+  position: absolute;
+  top: calc(50% - 13px);
+  left: calc(50% - 12px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  background: #fff;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  font-size: 0;
+}
+
+/*.before-after-img-box .btn-drag:before,*/
+.before-after-img-box .btn-drag:after {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: url(../images/ic-both-off.svg) center center no-repeat;
+  background-size: contain;
+}
+
+/*.before-after-img-box .btn-drag:before {
+    background: url(../images/common/comm_drag_prev.png) 0 0 no-repeat;
+    background-size: cover;
+}
+
+.before-after-img-box .btn-drag:after {
+    margin-left: 9px;
+    background: url(../images/common/comm_drag_next.png) 0 0 no-repeat;
+    background-size: cover;
+}*/
+/* 태블릿, 아이패드 */
+@media only screen and (min-device-width: 768px) {
+  header .header {
+    height: 60px;
+  }
+  header nav {
+    height: 60px;
+  }
+  .banner-container {
+    height: 430px;
+  }
+  .banner-container .swiper {
+    height: 430px;
+  }
+  .banner-container .swiper .slide {
+    height: 380px;
+  }
+  .main .section01:after {
+    width: 90%;
+    height: 800px;
+  }
+  .main > section .title {
+    line-height: 40px;
+    font-size: 20px;
+  }
+  .main > section .title span {
+    font-size: 24px;
+  }
+  .main > section .title b {
+    font-size: 36px;
+  }
+  .video {
+    width: 100%;
+    max-width: 900px;
+    height: 560px;
+  }
+  .video .video-container {
+    height: 560px;
+  }
+  .main .section03 div.img img {
+    height: 640px;
+  }
+  section.before-container {
+    justify-content: center;
+  }
+  .before-container .swiper {
+    width: 100%;
+    height: 500px;
+  }
+  .before-container .swiper .slide {
+    width: 50% !important;
+  }
+  .before-after-img-box {
+    height: 300px;
+  }
+  .main .section06:after {
+    width: 262px;
+    height: 262px;
+  }
+  .main .section07 {
+    justify-content: center;
+  }
+  .main .section07 h2 {
+    font-size: 36px;
+    width: 90%;
+    margin-bottom: 40px;
+  }
+  .main .section07 h2 button.btn {
+    font-size: 18px;
+  }
+  .main .section07 .cont {
+    width: 90%;
+    height: 70%;
+    text-align: center;
+  }
+  .main .section07 .cont img {
+    height: 100%;
+  }
+  .main .section08 .cont {
+    width: 90%;
+  }
+  .main .marster-container .swiper .slide-wrap .slide {
+    width: 38% !important;
+  }
+  .main .section10::after {
+    width: 816px;
+    height: 558px;
+    background-size: 816px 558px;
+  }
+  .main .section11 .cont {
+    width: 90%;
+  }
+  .main .section11 .cont .flex-justify {
+    line-height: 24px;
+  }
+  .main .section12 div.list {
+    width: 90%;
+  }
+  .main .section13 div.sns button {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+/* 아이폰 SE */
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+  .side-menu .menu {
+    overflow-y: scroll;
+  }
+  .side-menu .menu .logo {
+    width: 141px;
+  }
+  .side-menu .menu nav button {
+    padding: 10px 8px;
+  }
+  .main .section01 .title {
+    line-height: 35px;
+    font-size: 14px;
+  }
+  .main .section01 .title b,
+.main .section01 .title strong {
+    font-size: 26px;
+  }
+  .main > section .title p {
+    margin-top: 10px;
+  }
+  .main .section02 {
+    justify-content: space-around;
+    padding-top: 10%;
+  }
+  .main .section06:after {
+    background-size: auto 63%;
+  }
+  .main .section07 .cont {
+    min-height: 250px;
+  }
+  .main .section08 .cont {
+    padding: 10px;
+  }
+  .main .section08 .cont ul li {
+    margin-bottom: 10px;
+  }
+  .main .section10::after {
+    height: 150px;
+    background-size: auto 80%;
+  }
+  .main .section11 .cont .tit {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .main .section11 .cont {
+    margin-bottom: 10px;
+    padding: 10px;
+    min-height: 120px;
+  }
+  .main .section11 .cont .flex-justify {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .main .section12 div.list button {
+    margin-bottom: 10px;
+  }
+  .main .marster-container .swiper .slide-wrap .slide .flex-justify > div span {
+    font-size: 12px;
+  }
+  .main .marster-container .swiper .slide-wrap .slide .flex-justify > div ul li {
+    font-size: 12px;
+  }
+}
+/* 아이패드 프로 */

@@ -386,6 +386,7 @@ footer .ic-write::before {
 }
 
 .main {
+  border: 1px solid red;
   /*user-select: none;
   transition: all .1s ease-in-out;*/
   transition: all 0.1s cubic-bezier(0.02, 0.69, 0.11, 0.96);
@@ -482,6 +483,21 @@ footer .ic-write::before {
 }
 .main .section03 div.img img {
   height: 80%;
+}
+.main .main .section04,
+.main .section02,
+.main .section07,
+.main .section05,
+.main .section06,
+.main .section08,
+.main .section09,
+.main .section10,
+.main .section11,
+.main .section12,
+.main .section13 {
+  padding: 35px 0;
+  height: auto !important;
+  max-height: none !important;
 }
 .main .slide-container {
   justify-content: center;
@@ -913,8 +929,6 @@ footer .ic-write::before {
 
 .video {
   width: 100%;
-  max-width: 900px;
-  height: 360px;
 }
 .video .video-container {
   position: relative;

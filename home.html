@@ -7,12 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>코코수리</title>
-    <link href="./assets/css/style.css" rel="stylesheet" />
+    <link href="./assets/css/style01.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://thekenwheeler.herokuapp.com/scripts/browserSwipe.js"></script>
     <script src="https://thekenwheeler.herokuapp.com/scripts/touchswipe.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <link href="https://www.domebon.com/_dev/cocosuriMain/twentytwenty-master/css/twentytwenty.css" rel="stylesheet"
+        type="text/css" />
+    <script type="text/javascript"
+        src="https://www.domebon.com/_dev/cocosuriMain/twentytwenty-master/js/jquery.event.move.js"></script>
+    <script type="text/javascript"
+        src="https://www.domebon.com/_dev/cocosuriMain/twentytwenty-master/js/jquery.twentytwenty.js?v=" 1662623856>
+    </script>
 
     <script>
         $(document).ready(function () {
@@ -22,7 +29,7 @@
 
         function resizeContents() {
             //$(".section01").height($(window).height() - 191);
-            $("section").height($(window).height() - 160);
+            $(".section01").height($(window).height() - 160);
         }
     </script>
 </head>
@@ -54,7 +61,7 @@
     </header>
 
     <div id="mySidepanel" class="side-menu">
-        <div class="menu">
+        <div id="left-menu" class="menu">
             <div class="flex-justify">
                 <button class="logo hidden-text">코코수리</button>
                 <button class="close hidden-text" onclick="closeNav()">닫기</button>
@@ -81,9 +88,9 @@
     <div id="scroll01" class="main">
         <section class="section01">
             <div class="title">
-                우리집 수리 설치가 필요할 때, <br />
-                <b class="text-blue">코코수리</b>가격
-                <strong class="text-orange">9,316</strong> 명의 <br />
+                수리 설치가 필요한 순간, <br />
+                <b class="text-blue">코코수리</b>가
+                <strong class="text-orange count_num">0</strong> 명의 <br />
                 고객님께 도움을 드렸어요!
 
                 <button>견적보기</button>
@@ -95,11 +102,12 @@
                 <b class="text-blue">코코수리</b>
             </div>
             <div class="video">
-                <div class="video-container">
-                    <iframe width="100%" height="360px" src="https://www.youtube.com/embed/d42AIQuhqxo" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
+                <video muted controls playsinline
+                    poster="https://www.domebon.com/_dev/cocosuriMain/assets/images/cocosuri_main_video_poster.png"
+                    class="mainFullVideo mo_vw2" style="width: 100%;">
+                    <source src="https://www.domebon.com/_dev/cocosuriMain/pub/videos/main_video_m_220630.mp4"
+                        type="video/mp4">
+                </video>
             </div>
         </section>
         <section class="section03">
@@ -108,82 +116,188 @@
                 <img src="./assets/images/img-intro-text.gif" alt="" />
             </div>
         </section>
+        <section class="banner-container01">
+            <div class="title">
+                <span class="text-orange">급한 수리와 설치가 필요할 때?</span><br />
+                <b class="text-blue">코코수리 할 때!</b><br />
+            </div>
+
+            <div class="swiper bannerSlider01">
+                <div class="slide-wrap swiper-wrapper">
+                    <div class="slide swiper-slide">
+                        <button>
+                            <div class="img">
+                                <img src="./assets/images/img-banner-big01.png" alt="" />
+                            </div>
+                        </button>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <button>
+                            <div class="img">
+                                <img src="./assets/images/img-banner-big02.png" alt="" />
+                            </div>
+                        </button>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <button>
+                            <div class="img">
+                                <img src="./assets/images/img-banner-big03.png" alt="" />
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+
+
+            </div>
+
+        </section>
         <section class="section04 before-container">
             <div class="title">
                 <span class="text-orange">생생한 후기</span><br />
                 <b class="text-blue">비교해 보세요</b><br />
-                <p>
+                <!-- <p>
                     사진으로 전/후 비교해 보시고, 필요하신<br />
                     서비스를 찾아보세요
-                </p>
+                </p> -->
             </div>
 
-            <div class="swiper beforeSlider">
-                <div class="slide-wrap swiper-wrapper">
-                    <div class="slide swiper-slide">
-                        <div class="before-after-img-box js-before-after-img-box">
-                            <div class="btn-drag js-drag ui-draggable ui-draggable-handle"></div>
-                            <div class="before-after-img">
-                                <div class="before-box js-before">
-                                    <span class="lb-name tt-eng">before</span>
-                                    <div class="img-box"
-                                        style="background-image: url('https://uimg.vhom.kr/storage/dp/dpContImgFile/이천동양2_비포_1280_720_20220728101550.jpg');">
-                                    </div>
-                                </div>
-                                <div class="after-box js-after">
-                                    <span class="lb-name tt-eng">after</span>
-                                    <div class="img-box"
-                                        style="background-image: url('https://uimg.vhom.kr/storage/dp/dpContImgFile/이천동양2_에프터_1280_720_20220728101601.jpg');">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide swiper-slide">
-                        <div class="before-after-img-box js-before-after-img-box">
-                            <div class="btn-drag js-drag ui-draggable ui-draggable-handle"></div>
-                            <div class="before-after-img">
-                                <div class="before-box js-before">
-                                    <span class="lb-name tt-eng">before</span>
-                                    <div class="img-box"
-                                        style="background-image: url('https://uimg.vhom.kr/storage/dp/dpContImgFile/이천동양2_비포_1280_720_20220728101550.jpg');">
-                                    </div>
-                                </div>
-                                <div class="after-box js-after">
-                                    <span class="lb-name tt-eng">after</span>
-                                    <div class="img-box"
-                                        style="background-image: url('https://uimg.vhom.kr/storage/dp/dpContImgFile/이천동양2_에프터_1280_720_20220728101601.jpg');">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide swiper-slide">
-                        <div class="before-after-img-box js-before-after-img-box">
-                            <div class="btn-drag js-drag ui-draggable ui-draggable-handle"></div>
-                            <div class="before-after-img">
-                                <div class="before-box js-before">
-                                    <span class="lb-name tt-eng">before</span>
-                                    <div class="img-box"
-                                        style="background-image: url('https://uimg.vhom.kr/storage/dp/dpContImgFile/이천동양2_비포_1280_720_20220728101550.jpg');">
-                                    </div>
-                                </div>
-                                <div class="after-box js-after">
-                                    <span class="lb-name tt-eng">after</span>
-                                    <div class="img-box"
-                                        style="background-image: url('https://uimg.vhom.kr/storage/dp/dpContImgFile/이천동양2_에프터_1280_720_20220728101601.jpg');">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="before-cont">
+                <div class="before-after-slide">
+                    <span class="label before">before</span>
+                    <span class="label after">after</span>
+
+                    <img src="./assets/images/washbasin_before.png" alt="Before" />
+                    <img src="./assets/images/washbasin_after.png" alt="After" />
                 </div>
             </div>
 
+            <div class="before-cont">
+                <div class="before-after-slide">
+                    <span class="label before">before</span>
+                    <span class="label after">after</span>
+                    <img src="./assets/images/door_lock_before.png" alt="Before" />
+                    <img src="./assets/images/door_lock_after.png" alt="After" />
+                </div>
+            </div>
 
-
+            <div class="before-cont">
+                <div class="before-after-slide">
+                    <span class="label before">before</span>
+                    <span class="label after">after</span>
+                    <img src="./assets/images/basin_before.png" alt="Before" />
+                    <img src="./assets/images/basin_after.png" alt="After" />
+                </div>
+            </div>
 
         </section>
+        <section class="banner-container02">
+            <div class="title">
+                <span class="text-orange font22">지금은 이것이 대세</span><br />
+            </div>
+
+            <div class="swiper bannerSlider02">
+                <div class="slide-wrap swiper-wrapper">
+                    <div class="slide swiper-slide">
+                        <button>
+                            <div class="img">
+                                <img src="./assets/images/img-banner01.png" alt="" />
+                            </div>
+                        </button>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <button>
+                            <div class="img">
+                                <img src="./assets/images/img-banner02.png" alt="" />
+                            </div>
+                        </button>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <button>
+                            <div class="img">
+                                <img src="./assets/images/img-banner03.png" alt="" />
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+
+
+            </div>
+
+        </section>
+
+        <section class="banner-container03">
+            <div class="title">
+                <span class="text-orange ">기본부터 맞춤까지</span><br />
+                <b class="text-blue">믿고 맡기는 코코수리</b><br />
+            </div>
+
+            <div class="tab-list">
+                <button class="on">욕실</button>
+                <button class="">전기/조명</button>
+                <button class="">방충망</button>
+                <button class="">블라인드</button>
+                <button class="">블라인드</button>
+                <button class="">블라인드</button>
+            </div>
+
+            <div class="swiper bannerSlider02">
+                <div class="slide-wrap swiper-wrapper">
+                    <div class="slide swiper-slide">
+                        <div class="img">
+                            <img src="./assets/images/washbasin_after.png" alt="" />
+                        </div>
+
+                        <div class="description">
+                            <div class="tit">세면수전 설치</div>
+                            <div class="time">소요 시간 : 40분</div>
+                            <button class="btn">
+                                서비스 보기
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <div class="slide swiper-slide">
+                        <div class="img">
+                            <img src="./assets/images/basin_after.png" alt="" />
+                        </div>
+
+                        <div class="description">
+                            <div class="tit">세면수전 설치</div>
+                            <div class="time">소요 시간 : 40분</div>
+                            <button class="btn">
+                                서비스 보기
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <div class="slide swiper-slide">
+                        <div class="img">
+                            <img src="./assets/images/door_lock_after.png" alt="" />
+                        </div>
+
+                        <div class="description">
+                            <div class="tit">세면수전 설치</div>
+                            <div class="time">소요 시간 : 40분</div>
+                            <button class="btn">
+                                서비스 보기
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+
         <section class="section05 slide-container">
             <div class="title">
                 <span class="text-orange">가격은 기본!</span><br />
@@ -193,18 +307,23 @@
             <div class="swiper mySwiper">
                 <div class="slide-wrap swiper-wrapper">
                     <div class="slide swiper-slide">
-                        <button>
+                        <button style="width: 100%;">
                             <div class="img">
-                                <img src="./assets/images/img-test.png" alt="" />
+                                <img src="./assets/images/basin_after.png" alt="" />
                             </div>
                             <div class="description">
                                 <div class="flex-justify">
-                                    <span class="round bg-blue">수리</span>
+                                    <div class="flex-left">
+                                        <span class="round bg-orange">설치</span>
+                                        <span class="round bg-blue">수리</span>
+                                        <span class="round bg-green">상품</span>
+                                    </div>
                                     <span class="ic-start"> <i></i> 5.0 </span>
                                 </div>
                                 <div class="text">
-                                    기사님 진짜 꼼꼼완벽 그자체!! <br />
-                                    만족해요. 담에 또 이용하려구요
+                                    지인 소개로 코코수리 알게되어 의뢰했는데
+                                    일정도 빨리 잡히고, 꼼꼼하게 설치해주셔서
+                                    좋았어요. 가격도 만족해요~^^
                                 </div>
 
                                 <div class="date">2022-05-24</div>
@@ -212,18 +331,26 @@
                         </button>
                     </div>
                     <div class="slide swiper-slide">
-                        <button>
+                        <button style="width: 100%;">
                             <div class="img">
-                                <img src="./assets/images/img-test.png" alt="" />
+                                <img src="./assets/images/door_lock_after.png" alt="" />
                             </div>
                             <div class="description">
                                 <div class="flex-justify">
-                                    <span class="round bg-green">상품</span>
+                                    <div class="flex-left">
+                                        <span class="round bg-orange">설치</span>
+                                        <span class="round bg-blue">수리</span>
+                                        <span class="round bg-green">상품</span>
+                                    </div>
                                     <span class="ic-start"> <i></i> 5.0 </span>
                                 </div>
                                 <div class="text">
-                                    기사님 진짜 꼼꼼완벽 그자체!! <br />
-                                    만족해요. 담에 또 이용하려구요
+                                    지인 소개로 코코수리 알게되어 의뢰했는데
+                                    일정도 빨리 잡히고, 꼼꼼하게 설치해주셔서
+                                    좋았어요. 가격도 만족해요~^^
+                                    지인 소개로 코코수리 알게되어 의뢰했는데
+                                    일정도 빨리 잡히고, 꼼꼼하게 설치해주셔서
+                                    좋았어요. 가격도 만족해요~^^
                                 </div>
 
                                 <div class="date">2022-05-24</div>
@@ -231,13 +358,17 @@
                         </button>
                     </div>
                     <div class="slide swiper-slide">
-                        <button>
+                        <button style="width: 100%;">
                             <div class="img">
-                                <img src="./assets/images/img-test.png" alt="" />
+                                <img src="./assets/images/washbasin_after.png" alt="" />
                             </div>
                             <div class="description">
                                 <div class="flex-justify">
-                                    <span class="round bg-green">상품</span>
+                                    <div class="flex-left">
+                                        <span class="round bg-orange">설치</span>
+                                        <span class="round bg-blue">수리</span>
+                                        <span class="round bg-green">상품</span>
+                                    </div>
                                     <span class="ic-start"> <i></i> 5.0 </span>
                                 </div>
                                 <div class="text">
@@ -251,6 +382,7 @@
                     </div>
                 </div>
             </div>
+
 
 
         </section>
@@ -313,10 +445,14 @@
         </section>
         <section class="section09 marster-container">
             <div class="title">
-                <span class="text-orange">믿을 수 있는 기사님</span><br />
                 <b class="text-blue">코코수리 마스터</b>
+                <span class="text-orange">소중한 우리집<br />
+                    아무에게나 맡길 수 있나요?
+                </span>
+
                 <p>
-                    꼼꼼하고 믿을 수 있는 코코수리 기사님들의 실력과 신원을 보장합니다.
+                    코코수리는 꼼꼼하고 믿을 수 있는
+                    마스터님의 실력과 신원을 보장합니다.
                 </p>
             </div>
 
@@ -394,6 +530,7 @@
                     </div>
                 </div>
             </div>
+            <!-- <div class="swiper-pagination2" style="text-align: center;margin-top:10px;"></div> -->
 
 
         </section>
@@ -409,10 +546,49 @@
                 </p>
             </div>
         </section>
+        <section class="banner-container04">
+
+
+            <div class="swiper bannerSlider04">
+                <div class="slide-wrap swiper-wrapper">
+                    <div class="slide swiper-slide">
+                        <button>
+                            <div class="img">
+                                <img src="./assets/images/img-banner01.png" alt="" />
+                            </div>
+                        </button>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <button>
+                            <div class="img">
+                                <img src="./assets/images/img-banner02.png" alt="" />
+                            </div>
+                        </button>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <button>
+                            <div class="img">
+                                <img src="./assets/images/img-banner03.png" alt="" />
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+
+
+            </div>
+
+        </section>
+
         <section class="section11">
             <div class="title">
                 <span class="text-orange">아직 망설이고 계세요? </span><br />
                 <b class="text-blue">상담은 무료입니다</b>
+            </div>
+
+            <div class="cs-cont">
+                <img src="./assets/images/img-cs.png" alt="" />
             </div>
 
             <div class="cont">
@@ -464,7 +640,7 @@
         </section>
         <section class="section13">
             <div class="title">
-                <span class="text-orange">다른 문의가 있으신가요? <br />주저하지 말고 연락주세요!</span><br /><br />
+                <span class="text-orange">다른 문의가 있으신가요? <br />주저하지 말고 연락주세요!</span><br />
                 <b class="text-blue">코코수리 고객센터<br />
                     <a href="tel:1899-1692">1899-1692</a>
                 </b>
@@ -482,39 +658,58 @@
                 <button class="ic-blog"></button>
                 <button class="ic-youtube"></button>
                 <button class="ic-cocorio"></button>
+                <button class="ic-cocorio01"></button>
+                <button class="ic-cocorio02"></button>
             </div>
         </section>
 
-        <!-- <section class="section14 footer-container">
-        <div class="fnb">
-            <button>회사소개</button>
-            <button>매장안내</button>
-            <button>마스터(수리기사)</button>
-            <button>앱소개</button>
-        </div>
-        <div class="fnb bg-gray">
-            <button>이용약관</button>
-            <button>개인정보 처리방침</button>
-            <button>이메일주소무단수집거부</button>
-        </div>
-        <div class="info">
-            <b>코코수리 고객센터 1899-1692</b>
-            <span>운영시간 09:00 ~ 18:00 점심시간 : 12:00 ~ 13:00(일요일 휴무)</span>
-        </div>
+        <section class="subbanner-container">
+            <button>
+                <img src="./assets/images/img-banner-sub01.png" alt="" />
+            </button>
+            <button>
+                <img src="./assets/images/img-banner-sub02.png" alt="" />
+            </button>
+            <button>
+                <img src="./assets/images/img-banner-sub03.png" alt="" />
+            </button>
+        </section>
 
-        <div class="address">
-            상호: 주식회사 꼬끼오 대표: 유시만 개인정보관리책임자: 유광현 소재지: 경기 고양시 덕양구 권율대로 907 (KN빌딩) 6층
-            사업자등록번호: 128-86-03158 사업자정보확인 통신판매업 신고: 제2011-경기고양-1999호
-            <span  class="font10">
-                코코수리는 온라인 마켓 플레이스만을 제공하며 수리&설치서비스의 분쟁과 책임 계약사항은 입점회사와 당사자간에 있습니다.
-            </span>
+        <section class="section14 footer-container">
+            <div class="fnb">
+                <button>이용약관 </button>
+                <button>개인정보 처리방침</button>
+                <button>이메일주소 무단 수집거부</button>
+            </div>
 
-            <span class="copy font10">
-                Copyright ⓒ 2018 COKCOSURI Co. All rights reserved.
-            </span>
 
-        </div>
-       </section> -->
+            <div class="address">
+                상호: 주식회사 꼬끼오<br />
+                대표: 유시만<br />
+                개인정보관리 책임자: 유광현<br />
+                소재지: 경기 고양시 덕양구 권율대로 907(KN빌딩) 6층<br />
+                사업자등록번호: 128-86-03158<br />
+                통신판매업 신고: 제2011-경기고양-1999호<br /><br />
+
+
+                <span class="">
+                    코코수리는 온라인 마켓 플레이스만을 제공하며 수리&설치 서비스의 분쟁과<br />
+                    책임 계약사항은 입점회사와 당사자간에 있습니다.
+                </span>
+
+                <span class="copy">
+                    Copyright ⓒ 2018 COKCOSURI Co. All rights reserved.
+                </span>
+
+            </div>
+
+            <div class="foot-logo">
+                <button class="logo">
+                    <span>우리집 수리ㆍ설치의 모든 것 코코수리</span>
+                </button>
+
+            </div>
+        </section>
 
     </div>
     <!--item-->
@@ -544,7 +739,7 @@
 
             <div class="swiper-pagination"> </div>
             <div class="btn-wrap">
-                <button class="today">오늘 그만보기</button>
+                <button class="today" onclick="tNoSee()">오늘 그만보기</button>
                 <button class="close" id="close" onclick="closeNav01()">닫기</button>
             </div>
         </div>
@@ -554,6 +749,14 @@
     <!--//banner-container-->
 
     <script>
+        $(function () {
+
+            $('.before-after-slide').twentytwenty({
+                no_overlay: true
+            });
+
+        });
+
         var $body = $("html, body"),
             actualSection = 0,
             totalSections = 13,
@@ -564,31 +767,31 @@
             friction = 100,
             startY;
 
-        $("body").swipe({
-            swipe: function (event, direction) {
-                if (direction == "up") {
-                    moveScroll("down");
-                } else if (direction == "down") {
-                    moveScroll("up");
-                }
-            },
-        });
-        $("body, a, iframe").on("touchmove", function (e) {
-            e.stopPropagation();
-            e.preventDefault();
-        });
-        $("a, iframe").on("mouseenter", function (e) {
-            e.stopPropagation();
-            e.preventDefault();
-        });
-        $.browserSwipe({
-            up: function () {
-                moveScroll("up");
-            },
-            down: function () {
-                moveScroll("down");
-            },
-        });
+        //$("body").swipe({
+        //    swipe: function (event, direction) {
+        //        if (direction == "up") {
+        //            moveScroll("down");
+        //        } else if (direction == "down") {
+        //            moveScroll("up");
+        //        }
+        //    },
+        //});
+        //$("body, a, iframe").on("touchmove", function (e) {
+        //    e.stopPropagation();
+        //    e.preventDefault();
+        //});
+        //$("a, iframe").on("mouseenter", function (e) {
+        //    e.stopPropagation();
+        //    e.preventDefault();
+        //});
+        //$.browserSwipe({
+        //    up: function () {
+        //        moveScroll("up");
+        //    },
+        //    down: function () {
+        //        moveScroll("down");
+        //    },
+        //});
 
         // window resize
         var resizeTimeout;
@@ -653,7 +856,10 @@ toggle between hiding and showing the dropdown content */
             // document.getElementById("mySidepanel").style.width = "100%";
             //document.getElementById("mySidepanel").style.display = "block";
             var element = document.getElementById("mySidepanel");
+            var element2 = document.getElementById("left-menu");
+            $("#mySidepanel").css("z-index", 300);
             element.classList.add("on");
+            element2.classList.add("on");
         }
 
         /* Set the width of the sidebar to 0 (hide it) */
@@ -661,7 +867,12 @@ toggle between hiding and showing the dropdown content */
             // document.getElementById("mySidepanel").style.width = "0";
             //document.getElementById("mySidepanel").style.display = "none";
             var element = document.getElementById("mySidepanel");
+            var element2 = document.getElementById("left-menu");
             element.classList.remove("on");
+            element2.classList.remove("on");
+            setTimeout(function () {
+                $("#mySidepanel").css("z-index", 0);
+            }, 100);
             var element1 = document.style.display = "none";
         }
 
@@ -686,33 +897,31 @@ toggle between hiding and showing the dropdown content */
     </script>
 
     <script>
-        var swiper = new Swiper(".beforeSlider", {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            //slidesPerGroup: 3,
-            loop: true,
-            //loopFillGroupWithBlank: true,
-            centeredSlides: true,
-
-        });
+        // var swiper = new Swiper(".beforeSlider", {
+        //     slidesPerView: 3,
+        //     spaceBetween: 20,
+        //     //slidesPerGroup: 3,
+        //     loop: true,
+        //     //loopFillGroupWithBlank: true,
+        //     centeredSlides: true,
+        //
+        // });
         var swiper2 = new Swiper(".mySwiper", {
-            slidesPerView: 4,
+            //width: 245,
+            slidesPerView: "auto",
             spaceBetween: 20,
-            //slidesPerGroup: 3,
-            loop: true,
-            //loopFillGroupWithBlank: true,
-            centeredSlides: true,
-
-
+            pagination: {
+                el: ".swiper-pagination1",
+            },
         });
         var swiper3 = new Swiper(".marsterSlider", {
-            slidesPerView: 3,
+            slidesPerView: "auto",
             spaceBetween: 20,
-            slidesPerGroup: 3,
             loop: true,
-            //loopFillGroupWithBlank: true,
-            centeredSlides: true,
-
+            pagination: {
+                el: '.swiper-pagination2',
+                clickable: true,
+            },
         });
         var swiper4 = new Swiper(".bannerSlider", {
 
@@ -722,6 +931,81 @@ toggle between hiding and showing the dropdown content */
             },
 
         });
+        var swiper5 = new Swiper(".bannerSlider01", {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+
+        });
+        var swiper6 = new Swiper(".bannerSlider02", {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+
+        });
+        var swiper7 = new Swiper(".bannerSlider03", {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+
+
+        });
+        var swiper8 = new Swiper(".bannerSlider04", {
+            slidesPerView: "1",
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+
+        });
+
+        $({
+            val: 0
+        }).animate({
+            val: 9316
+        }, {
+            duration: 1500,
+            step: function () {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count_num").text(num);
+            },
+            complete: function () {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count_num").text(num);
+            }
+        });
+
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        function setCookie(name, value, exp) {
+            var date = new Date();
+            date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000);
+            document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+        };
+
+        function getCookie(name) {
+            var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+            return value ? value[2] : null;
+        };
+
+        if (getCookie('introPopHide') == 'Y') {
+            $(".banner-container").hide();
+        }
+
+        // 팝업 오늘 그만 보기
+        function tNoSee() {
+
+            setCookie('introPopHide', 'Y', 1);
+            $(".banner-container").hide();
+
+        }
     </script>
 
 

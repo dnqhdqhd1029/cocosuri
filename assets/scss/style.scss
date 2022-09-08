@@ -468,6 +468,7 @@ footer {
 }
 
 .main {
+    border: 1px solid red;
     /*user-select: none;
     transition: all .1s ease-in-out;*/
     transition: all 0.1s cubic-bezier(0.02, 0.69, 0.11, 0.96);
@@ -592,6 +593,22 @@ footer {
                 height: 80%;
             }
         }
+    }
+
+    .main .section04,
+    .section02,
+    .section07,
+    .section05,
+    .section06,
+    .section08,
+    .section09,
+    .section10,
+    .section11,
+    .section12,
+    .section13 {
+        padding: 35px 0;
+        height: auto !important;
+        max-height: none !important;
     }
 
     .slide-container {
@@ -1134,8 +1151,8 @@ footer {
 
 .video {
     width: 100%;
-    max-width: 900px;
-    height: 360px;
+    // max-width: 900px;
+    // height: 360px;
 
     .video-container {
         position: relative;
