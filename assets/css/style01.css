@@ -61,7 +61,7 @@ header .header .menu {
 }
 
 header .header .logo {
-  width: 130px;
+  width: 129px;
   height: 26px;
   background: url(../images/ic-logo.svg) center center no-repeat;
   background-size: contain;
@@ -375,21 +375,21 @@ footer .ic-write::before {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 230px;
+  height: 410px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   overflow: hidden;
-  z-index: 100;
+  z-index: 200;
 }
 
 .banner-container .swiper {
   width: 100%;
-  height: 230px;
+  height: 410px;
   position: relative;
 }
 
 .banner-container .swiper .slide {
-  height: 180px;
+  height: 360px;
 }
 
 .banner-container .swiper .slide button {
@@ -429,7 +429,7 @@ footer .ic-write::before {
   align-items: center;
   right: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: 300;
   padding: 0 10px;
 }
 
@@ -564,7 +564,7 @@ footer .ic-write::before {
 }
 
 .main .slide-container .swiper .slide-wrap .slide {
-  width: 80% !important;
+  width: 248px !important;
   background-color: #fff;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -586,7 +586,7 @@ footer .ic-write::before {
 }
 
 .main .slide-container .swiper .slide-wrap .slide .description {
-  padding: 15px;
+  padding: 0 15px;
 }
 
 .main .slide-container .swiper .slide-wrap .slide .description .flex-justify .round {
@@ -1386,6 +1386,7 @@ footer .ic-write::before {
 /*banner-container01*/
 .banner-container01 {
   padding: 40px 0;
+  padding-top: 80px;
 }
 .banner-container01 .swiper {
   width: 100%;
@@ -2463,22 +2464,22 @@ footer .ic-write::before {
   }
   .main .section07 h2 {
     font-size: 36px;
-    width: 90%;
     margin-bottom: 40px;
   }
   .main .section07 h2 button.btn {
     font-size: 18px;
   }
   .main .section07 .cont {
-    width: 90%;
+    width: 94%;
     height: 70%;
     text-align: center;
+    padding: 60px;
   }
   .main .section07 .cont img {
     height: 100%;
   }
   .main .section08 .cont {
-    width: 90%;
+    width: 94%;
   }
   .main .marster-container .swiper .slide-wrap .slide {
     width: 38% !important;
@@ -2489,19 +2490,60 @@ footer .ic-write::before {
     background-size: 816px 558px;
   }
   .main .section11 .cont {
-    width: 90%;
+    width: 94%;
   }
   .main .section11 .cont .flex-justify {
     line-height: 24px;
   }
   .main .section12 div.list {
-    width: 90%;
+    width: 94%;
   }
   .main .section13 div.sns button {
     width: 65px;
     height: 65px;
     border-radius: 50%;
     overflow: hidden;
+  }
+  .subbanner-container button {
+    height: 368px;
+  }
+  .subbanner-container button img {
+    object-fit: cover;
+  }
+  img {
+    object-fit: cover;
+  }
+  .sns-container .cont {
+    width: 94%;
+    padding: 0;
+  }
+  .banner-container04 .swiper {
+    height: 400px;
+  }
+  .banner-container04 .swiper .swiper-slide {
+    height: 400px;
+  }
+  .price-container {
+    height: 244px;
+  }
+  .price-container button div.img {
+    width: 200px;
+    height: 200px;
+  }
+  .price-container button div.price div {
+    margin-left: 251px;
+    width: 65%;
+  }
+  .service-container03 .visual {
+    height: 720px;
+  }
+  .planning-container .visual,
+.service-container02 .visual,
+.service-container01 .visual {
+    height: 540px;
+  }
+  .before-container .before-after-slide {
+    height: 422px !important;
   }
 }
 /* 아이폰 SE */
@@ -2567,6 +2609,9 @@ footer .ic-write::before {
   }
   .main .marster-container .swiper .slide-wrap .slide .flex-justify > div ul li {
     font-size: 12px;
+  }
+  .main .footer-container .fnb button {
+    font-size: 10px;
   }
 }
 /* 아이패드 프로 */
